@@ -61,7 +61,9 @@ const Nav = () => {
                   variant="outline"
                 />
                 <MenuList>
-                  <MenuItem icon={<AtSignIcon />}>Home</MenuItem>
+                  <Link href="/">
+                    <MenuItem icon={<AtSignIcon />}>Home</MenuItem>
+                  </Link>
                   <Link href="/create">
                     <MenuItem icon={<RepeatIcon />}>Trade</MenuItem>
                   </Link>

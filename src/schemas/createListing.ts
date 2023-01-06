@@ -21,6 +21,7 @@ const individualValueSelectProperties = z.object({
 
 const natureSelectProperties = z.object({
   label: z.enum([
+    'Any',
     'Hardy',
     'Lonely',
     'Brave',
@@ -48,6 +49,7 @@ const natureSelectProperties = z.object({
     'Quirky',
   ]),
   value: z.enum([
+    'any',
     'hardy',
     'lonely',
     'brave',
