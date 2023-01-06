@@ -1625,6 +1625,11 @@
   "resolved" "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-4.7.1-1.272861e07ab64f234d3ffc4094e32bd61775599c.tgz"
   "version" "4.7.1-1.272861e07ab64f234d3ffc4094e32bd61775599c"
 
+"@prisma/engines@4.8.1":
+  "integrity" "sha512-93tctjNXcIS+i/e552IO6tqw17sX8liivv8WX9lDMCpEEe3ci+nT9F+1oHtAafqruXLepKF80i/D20Mm+ESlOw=="
+  "resolved" "https://registry.npmjs.org/@prisma/engines/-/engines-4.8.1.tgz"
+  "version" "4.8.1"
+
 "@rushstack/eslint-patch@^1.1.3":
   "integrity" "sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg=="
   "resolved" "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz"
@@ -5445,6 +5450,13 @@
   "integrity" "sha512-IJ+MSwBWKG+SM3b2SUfdrhC+gu01QkV2KmRQgREThBfSQRoufqRfxfHUxpG1WcaFjP+kojcFyO9Qqtpgt3qLCg=="
   "resolved" "https://registry.npmjs.org/prism-react-renderer/-/prism-react-renderer-1.3.5.tgz"
   "version" "1.3.5"
+
+"prisma@*", "prisma@^4.8.1":
+  "integrity" "sha512-ZMLnSjwulIeYfaU1O6/LF6PEJzxN5par5weykxMykS9Z6ara/j76JH3Yo2AH3bgJbPN4Z6NeCK9s5fDkzf33cg=="
+  "resolved" "https://registry.npmjs.org/prisma/-/prisma-4.8.1.tgz"
+  "version" "4.8.1"
+  dependencies:
+    "@prisma/engines" "4.8.1"
 
 "process-on-spawn@^1.0.0":
   "integrity" "sha512-1WsPDsUSMmZH5LeMLegqkPDrsGgsWwk1Exipy2hvB0o/F0ASzbpIctSCcZIK1ykJvtTJULEH+20WOFjMvGnCTg=="
