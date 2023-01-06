@@ -1,0 +1,255 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+  relationMode      = "prisma"
+}
+
+// Necessary for Next auth
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId], name: "userId")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId], name: "userId")
+}
+
+model User {
+  id              String            @id @default(cuid())
+  name            String?
+  discriminator   String?
+  email           String?           @unique
+  emailVerified   DateTime?
+  image           String?
+  accounts        Account[]
+  sessions        Session[]
+  pokemonListing  PokemonListing[]
+  pokemonOffer    PokemonOffer[]
+  pokemonWishlist PokemonWishlist[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Pokemon {
+  id              Int               @id
+  name            String
+  image           String
+  typeOne         Type
+  typeTwo         Type?
+  pokemonListing  PokemonListing[]
+  pokemonOffer    PokemonOffer[]
+  pokemonWishlist PokemonWishlist[]
+}
+
+model PokemonWishlist {
+  id             String           @id @default(cuid())
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  userId         String
+  pokemonId      Int
+  health         IndividualValue?
+  attack         IndividualValue?
+  specialAttack  IndividualValue?
+  defense        IndividualValue?
+  specialDefense IndividualValue?
+  speed          IndividualValue?
+  level          Int?
+  nature         Nature?
+  ability        String?
+  teraType       TeraType?
+  shiny          Boolean?
+  region         Region?
+  touch          Boolean?
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pokemon        Pokemon          @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+
+  @@index([userId], name: "userId")
+  @@index([pokemonId], name: "pokemonId")
+}
+
+model PokemonListing {
+  id             String           @id @default(cuid())
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  userId         String
+  pokemonId      Int
+  health         IndividualValue?
+  attack         IndividualValue?
+  specialAttack  IndividualValue?
+  defense        IndividualValue?
+  specialDefense IndividualValue?
+  speed          IndividualValue?
+  level          Int?
+  nature         Nature?
+  ability        String?
+  teraType       TeraType?
+  shiny          Boolean?
+  region         Region?
+  free           Boolean?
+  touch          Boolean?
+  acceptOffers   Boolean?
+  offers         PokemonOffer[]
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pokemon        Pokemon          @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+
+  @@index([userId], name: "userId")
+  @@index([pokemonId], name: "pokemonId")
+}
+
+model PokemonOffer {
+  id             String           @id @default(cuid())
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  userId         String?
+  pokemonId      Int
+  health         IndividualValue?
+  attack         IndividualValue?
+  specialAttack  IndividualValue?
+  defense        IndividualValue?
+  specialDefense IndividualValue?
+  speed          IndividualValue?
+  level          Int?
+  nature         Nature?
+  ability        String?
+  teraType       TeraType?
+  shiny          Boolean?
+  region         Region?
+  touch          Boolean?
+  listingId      String
+  listing        PokemonListing   @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  user           User?            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pokemon        Pokemon          @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+
+  @@index([listingId], name: "listingId")
+  @@index([userId], name: "userId")
+  @@index([pokemonId], name: "pokemonId")
+}
+
+enum Type {
+  normal
+  fire
+  water
+  electric
+  grass
+  ice
+  fighting
+  poison
+  ground
+  flying
+  psychic
+  bug
+  rock
+  ghost
+  dragon
+  dark
+  steel
+  fairy
+}
+
+enum TeraType {
+  any
+  normal
+  fire
+  water
+  electric
+  grass
+  ice
+  fighting
+  poison
+  ground
+  flying
+  psychic
+  bug
+  rock
+  ghost
+  dragon
+  dark
+  steel
+  fairy
+}
+
+enum Nature {
+  any
+  hardy
+  lonely
+  adamant
+  naughty
+  brave
+  bold
+  docile
+  impish
+  lax
+  relaxed
+  modest
+  mild
+  bashful
+  rash
+  quiet
+  calm
+  gentle
+  careful
+  quirky
+  sassy
+  timid
+  hasty
+  jolly
+  naive
+  serious
+}
+
+enum IndividualValue {
+  best
+  fantastic
+  veryGood
+  prettyGood
+  decent
+  noGood
+}
+
+enum Region {
+  any
+  ENG
+  JPN
+  SPA
+  SPEU
+  FRE
+  GER
+  ITA
+  CHT
+  CHS
+  KOR
+}

@@ -1,0 +1,2402 @@
+[
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sprigatito.png",
+    "name": "Sprigatito",
+    "number": "#001",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/floragato.png",
+    "name": "Floragato",
+    "number": "#002",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/meowscarada.png",
+    "name": "Meowscarada",
+    "number": "#003",
+    "types": ["Grass", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/fuecoco.png",
+    "name": "Fuecoco",
+    "number": "#004",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/crocalor.png",
+    "name": "Crocalor",
+    "number": "#005",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/skeledirge.png",
+    "name": "Skeledirge",
+    "number": "#006",
+    "types": ["Fire", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/quaxly.png",
+    "name": "Quaxly",
+    "number": "#007",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/quaxwell.png",
+    "name": "Quaxwell",
+    "number": "#008",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/quaquaval.png",
+    "name": "Quaquaval",
+    "number": "#009",
+    "types": ["Water", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lechonk.png",
+    "name": "Lechonk",
+    "number": "#010",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/oinkologne.png",
+    "name": "Oinkologne",
+    "number": "#011",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tarountula.png",
+    "name": "Tarountula",
+    "number": "#012",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/spidops.png",
+    "name": "Spidops",
+    "number": "#013",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/nymble.png",
+    "name": "Nymble",
+    "number": "#014",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lokix.png",
+    "name": "Lokix",
+    "number": "#015",
+    "types": ["Bug", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hoppip.png",
+    "name": "Hoppip",
+    "number": "#016",
+    "types": ["Grass", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/skiploom.png",
+    "name": "Skiploom",
+    "number": "#017",
+    "types": ["Grass", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/jumpluff.png",
+    "name": "Jumpluff",
+    "number": "#018",
+    "types": ["Grass", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/fletchling.png",
+    "name": "Fletchling",
+    "number": "#019",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/fletchinder.png",
+    "name": "Fletchinder",
+    "number": "#020",
+    "types": ["Fire", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/talonflame.png",
+    "name": "Talonflame",
+    "number": "#021",
+    "types": ["Fire", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmi.png",
+    "name": "Pawmi",
+    "number": "#022",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmo.png",
+    "name": "Pawmo",
+    "number": "#023",
+    "types": ["Electric", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmot.png",
+    "name": "Pawmot",
+    "number": "#024",
+    "types": ["Electric", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/houndour.png",
+    "name": "Houndour",
+    "number": "#025",
+    "types": ["Dark", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/houndoom.png",
+    "name": "Houndoom",
+    "number": "#026",
+    "types": ["Dark", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/yungoos.png",
+    "name": "Yungoos",
+    "number": "#027",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gumshoos.png",
+    "name": "Gumshoos",
+    "number": "#028",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/skwovet.png",
+    "name": "Skwovet",
+    "number": "#029",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/greedent.png",
+    "name": "Greedent",
+    "number": "#030",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sunkern.png",
+    "name": "Sunkern",
+    "number": "#031",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sunflora.png",
+    "name": "Sunflora",
+    "number": "#032",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kricketot.png",
+    "name": "Kricketot",
+    "number": "#033",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kricketune.png",
+    "name": "Kricketune",
+    "number": "#034",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/scatterbug.png",
+    "name": "Scatterbug",
+    "number": "#035",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/spewpa.png",
+    "name": "Spewpa",
+    "number": "#036",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/vivillon.png",
+    "name": "Vivillon",
+    "number": "#037",
+    "types": ["Bug", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/combee.png",
+    "name": "Combee",
+    "number": "#038",
+    "types": ["Bug", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/vespiquen.png",
+    "name": "Vespiquen",
+    "number": "#039",
+    "types": ["Bug", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rookidee.png",
+    "name": "Rookidee",
+    "number": "#040",
+    "types": ["Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/corvisquire.png",
+    "name": "Corvisquire",
+    "number": "#041",
+    "types": ["Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/corviknight.png",
+    "name": "Corviknight",
+    "number": "#042",
+    "types": ["Flying", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/happiny.png",
+    "name": "Happiny",
+    "number": "#043",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/chansey.png",
+    "name": "Chansey",
+    "number": "#044",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/blissey.png",
+    "name": "Blissey",
+    "number": "#045",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/azurill.png",
+    "name": "Azurill",
+    "number": "#046",
+    "types": ["Normal", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/marill.png",
+    "name": "Marill",
+    "number": "#047",
+    "types": ["Water", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/azumarill.png",
+    "name": "Azumarill",
+    "number": "#048",
+    "types": ["Water", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/surskit.png",
+    "name": "Surskit",
+    "number": "#049",
+    "types": ["Bug", "Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/masquerain.png",
+    "name": "Masquerain",
+    "number": "#050",
+    "types": ["Bug", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/buizel.png",
+    "name": "Buizel",
+    "number": "#051",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/floatzel.png",
+    "name": "Floatzel",
+    "number": "#052",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wooper.png",
+    "name": "Wooper",
+    "number": "#053",
+    "types": ["Water", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/clodsire.png",
+    "name": "Clodsire",
+    "number": "#054",
+    "types": ["Poison", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/psyduck.png",
+    "name": "Psyduck",
+    "number": "#055",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/golduck.png",
+    "name": "Golduck",
+    "number": "#056",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/chewtle.png",
+    "name": "Chewtle",
+    "number": "#057",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/drednaw.png",
+    "name": "Drednaw",
+    "number": "#058",
+    "types": ["Water", "Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/igglybuff.png",
+    "name": "Igglybuff",
+    "number": "#059",
+    "types": ["Normal", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/jigglypuff.png",
+    "name": "Jigglypuff",
+    "number": "#060",
+    "types": ["Normal", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wigglytuff.png",
+    "name": "Wigglytuff",
+    "number": "#061",
+    "types": ["Normal", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ralts.png",
+    "name": "Ralts",
+    "number": "#062",
+    "types": ["Psychic", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kirlia.png",
+    "name": "Kirlia",
+    "number": "#063",
+    "types": ["Psychic", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gardevoir.png",
+    "name": "Gardevoir",
+    "number": "#064",
+    "types": ["Psychic", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gallade.png",
+    "name": "Gallade",
+    "number": "#065",
+    "types": ["Psychic", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/drowzee.png",
+    "name": "Drowzee",
+    "number": "#066",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hypno.png",
+    "name": "Hypno",
+    "number": "#067",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gastly.png",
+    "name": "Gastly",
+    "number": "#068",
+    "types": ["Ghost", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/haunter.png",
+    "name": "Haunter",
+    "number": "#069",
+    "types": ["Ghost", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gengar.png",
+    "name": "Gengar",
+    "number": "#070",
+    "types": ["Ghost", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tandemaus.png",
+    "name": "Tandemaus",
+    "number": "#071",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/maushold.png",
+    "name": "Maushold",
+    "number": "#072",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pichu.png",
+    "name": "Pichu",
+    "number": "#073",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pikachu.png",
+    "name": "Pikachu",
+    "number": "#074",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/raichu.png",
+    "name": "Raichu",
+    "number": "#075",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/fidough.png",
+    "name": "Fidough",
+    "number": "#076",
+    "types": ["Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dachsbun.png",
+    "name": "Dachsbun",
+    "number": "#077",
+    "types": ["Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slakoth.png",
+    "name": "Slakoth",
+    "number": "#078",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/vigoroth.png",
+    "name": "Vigoroth",
+    "number": "#079",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slaking.png",
+    "name": "Slaking",
+    "number": "#080",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bounsweet.png",
+    "name": "Bounsweet",
+    "number": "#081",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/steenee.png",
+    "name": "Steenee",
+    "number": "#082",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tsareena.png",
+    "name": "Tsareena",
+    "number": "#083",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/smoliv.png",
+    "name": "Smoliv",
+    "number": "#084",
+    "types": ["Grass", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dolliv.png",
+    "name": "Dolliv",
+    "number": "#085",
+    "types": ["Grass", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/arboliva.png",
+    "name": "Arboliva",
+    "number": "#086",
+    "types": ["Grass", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bonsly.png",
+    "name": "Bonsly",
+    "number": "#087",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sudowoodo.png",
+    "name": "Sudowoodo",
+    "number": "#088",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rockruff.png",
+    "name": "Rockruff",
+    "number": "#089",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lycanroc.png",
+    "name": "Lycanroc",
+    "number": "#090",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rolycoly.png",
+    "name": "Rolycoly",
+    "number": "#091",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/carkol.png",
+    "name": "Carkol",
+    "number": "#092",
+    "types": ["Rock", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/coalossal.png",
+    "name": "Coalossal",
+    "number": "#093",
+    "types": ["Rock", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shinx.png",
+    "name": "Shinx",
+    "number": "#094",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/luxio.png",
+    "name": "Luxio",
+    "number": "#095",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/luxray.png",
+    "name": "Luxray",
+    "number": "#096",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/starly.png",
+    "name": "Starly",
+    "number": "#097",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/staravia.png",
+    "name": "Staravia",
+    "number": "#098",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/staraptor.png",
+    "name": "Staraptor",
+    "number": "#099",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/oricorio.png",
+    "name": "Oricorio",
+    "number": "#100",
+    "types": ["Fire", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mareep.png",
+    "name": "Mareep",
+    "number": "#101",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flaaffy.png",
+    "name": "Flaaffy",
+    "number": "#102",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ampharos.png",
+    "name": "Ampharos",
+    "number": "#103",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/petilil.png",
+    "name": "Petilil",
+    "number": "#104",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lilligant.png",
+    "name": "Lilligant",
+    "number": "#105",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shroomish.png",
+    "name": "Shroomish",
+    "number": "#106",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/breloom.png",
+    "name": "Breloom",
+    "number": "#107",
+    "types": ["Grass", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/applin.png",
+    "name": "Applin",
+    "number": "#108",
+    "types": ["Grass", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flapple.png",
+    "name": "Flapple",
+    "number": "#109",
+    "types": ["Grass", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/appletun.png",
+    "name": "Appletun",
+    "number": "#110",
+    "types": ["Grass", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/spoink.png",
+    "name": "Spoink",
+    "number": "#111",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/grumpig.png",
+    "name": "Grumpig",
+    "number": "#112",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/squawkabilly.png",
+    "name": "Squawkabilly",
+    "number": "#113",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/misdreavus.png",
+    "name": "Misdreavus",
+    "number": "#114",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mismagius.png",
+    "name": "Mismagius",
+    "number": "#115",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/makuhita.png",
+    "name": "Makuhita",
+    "number": "#116",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hariyama.png",
+    "name": "Hariyama",
+    "number": "#117",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/crabrawler.png",
+    "name": "Crabrawler",
+    "number": "#118",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/crabominable.png",
+    "name": "Crabominable",
+    "number": "#119",
+    "types": ["Fighting", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/salandit.png",
+    "name": "Salandit",
+    "number": "#120",
+    "types": ["Poison", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/salazzle.png",
+    "name": "Salazzle",
+    "number": "#121",
+    "types": ["Poison", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/phanpy.png",
+    "name": "Phanpy",
+    "number": "#122",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/donphan.png",
+    "name": "Donphan",
+    "number": "#123",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cufant.png",
+    "name": "Cufant",
+    "number": "#124",
+    "types": ["Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/copperajah.png",
+    "name": "Copperajah",
+    "number": "#125",
+    "types": ["Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gible.png",
+    "name": "Gible",
+    "number": "#126",
+    "types": ["Dragon", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gabite.png",
+    "name": "Gabite",
+    "number": "#127",
+    "types": ["Dragon", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/garchomp.png",
+    "name": "Garchomp",
+    "number": "#128",
+    "types": ["Dragon", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/nacli.png",
+    "name": "Nacli",
+    "number": "#129",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/naclstack.png",
+    "name": "Naclstack",
+    "number": "#130",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/garganacl.png",
+    "name": "Garganacl",
+    "number": "#131",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wingull.png",
+    "name": "Wingull",
+    "number": "#132",
+    "types": ["Water", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pelipper.png",
+    "name": "Pelipper",
+    "number": "#133",
+    "types": ["Water", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/magikarp.png",
+    "name": "Magikarp",
+    "number": "#134",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gyarados.png",
+    "name": "Gyarados",
+    "number": "#135",
+    "types": ["Water", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/arrokuda.png",
+    "name": "Arrokuda",
+    "number": "#136",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/barraskewda.png",
+    "name": "Barraskewda",
+    "number": "#137",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/basculin.png",
+    "name": "Basculin",
+    "number": "#138",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gulpin.png",
+    "name": "Gulpin",
+    "number": "#139",
+    "types": ["Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/swalot.png",
+    "name": "Swalot",
+    "number": "#140",
+    "types": ["Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/meowth.png",
+    "name": "Meowth",
+    "number": "#141",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/persian.png",
+    "name": "Persian",
+    "number": "#142",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/drifloon.png",
+    "name": "Drifloon",
+    "number": "#143",
+    "types": ["Ghost", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/drifblim.png",
+    "name": "Drifblim",
+    "number": "#144",
+    "types": ["Ghost", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flabebe.png",
+    "name": "Flabébé",
+    "number": "#145",
+    "types": ["Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/floette.png",
+    "name": "Floette",
+    "number": "#146",
+    "types": ["Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/florges.png",
+    "name": "Florges",
+    "number": "#147",
+    "types": ["Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/diglett.png",
+    "name": "Diglett",
+    "number": "#148",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dugtrio.png",
+    "name": "Dugtrio",
+    "number": "#149",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/torkoal.png",
+    "name": "Torkoal",
+    "number": "#150",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/numel.png",
+    "name": "Numel",
+    "number": "#151",
+    "types": ["Fire", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/camerupt.png",
+    "name": "Camerupt",
+    "number": "#152",
+    "types": ["Fire", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bronzor.png",
+    "name": "Bronzor",
+    "number": "#153",
+    "types": ["Steel", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bronzong.png",
+    "name": "Bronzong",
+    "number": "#154",
+    "types": ["Steel", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/axew.png",
+    "name": "Axew",
+    "number": "#155",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/fraxure.png",
+    "name": "Fraxure",
+    "number": "#156",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/haxorus.png",
+    "name": "Haxorus",
+    "number": "#157",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mankey.png",
+    "name": "Mankey",
+    "number": "#158",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/primeape.png",
+    "name": "Primeape",
+    "number": "#159",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/annihilape.png",
+    "name": "Annihilape",
+    "number": "#160",
+    "types": ["Fighting", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/meditite.png",
+    "name": "Meditite",
+    "number": "#161",
+    "types": ["Fighting", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/medicham.png",
+    "name": "Medicham",
+    "number": "#162",
+    "types": ["Fighting", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/riolu.png",
+    "name": "Riolu",
+    "number": "#163",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lucario.png",
+    "name": "Lucario",
+    "number": "#164",
+    "types": ["Fighting", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/charcadet.png",
+    "name": "Charcadet",
+    "number": "#165",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/armarouge.png",
+    "name": "Armarouge",
+    "number": "#166",
+    "types": ["Fire", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ceruledge.png",
+    "name": "Ceruledge",
+    "number": "#167",
+    "types": ["Fire", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/barboach.png",
+    "name": "Barboach",
+    "number": "#168",
+    "types": ["Water", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/whiscash.png",
+    "name": "Whiscash",
+    "number": "#169",
+    "types": ["Water", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tadbulb.png",
+    "name": "Tadbulb",
+    "number": "#170",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bellibolt.png",
+    "name": "Bellibolt",
+    "number": "#171",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/goomy.png",
+    "name": "Goomy",
+    "number": "#172",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sliggoo.png",
+    "name": "Sliggoo",
+    "number": "#173",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/goodra.png",
+    "name": "Goodra",
+    "number": "#174",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/croagunk.png",
+    "name": "Croagunk",
+    "number": "#175",
+    "types": ["Poison", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toxicroak.png",
+    "name": "Toxicroak",
+    "number": "#176",
+    "types": ["Poison", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wattrel.png",
+    "name": "Wattrel",
+    "number": "#177",
+    "types": ["Electric", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kilowattrel.png",
+    "name": "Kilowattrel",
+    "number": "#178",
+    "types": ["Electric", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/eevee.png",
+    "name": "Eevee",
+    "number": "#179",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/vaporeon.png",
+    "name": "Vaporeon",
+    "number": "#180",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/jolteon.png",
+    "name": "Jolteon",
+    "number": "#181",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flareon.png",
+    "name": "Flareon",
+    "number": "#182",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/espeon.png",
+    "name": "Espeon",
+    "number": "#183",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/umbreon.png",
+    "name": "Umbreon",
+    "number": "#184",
+    "types": ["Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/leafeon.png",
+    "name": "Leafeon",
+    "number": "#185",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/glaceon.png",
+    "name": "Glaceon",
+    "number": "#186",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sylveon.png",
+    "name": "Sylveon",
+    "number": "#187",
+    "types": ["Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dunsparce.png",
+    "name": "Dunsparce",
+    "number": "#188",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dudunsparce.png",
+    "name": "Dudunsparce",
+    "number": "#189",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/deerling.png",
+    "name": "Deerling",
+    "number": "#190",
+    "types": ["Normal", "Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sawsbuck.png",
+    "name": "Sawsbuck",
+    "number": "#191",
+    "types": ["Normal", "Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/girafarig.png",
+    "name": "Girafarig",
+    "number": "#192",
+    "types": ["Normal", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/farigiraf.png",
+    "name": "Farigiraf",
+    "number": "#193",
+    "types": ["Normal", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/grimer.png",
+    "name": "Grimer",
+    "number": "#194",
+    "types": ["Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/muk.png",
+    "name": "Muk",
+    "number": "#195",
+    "types": ["Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/maschiff.png",
+    "name": "Maschiff",
+    "number": "#196",
+    "types": ["Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png",
+    "name": "Mabosstiff",
+    "number": "#197",
+    "types": ["Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toxel.png",
+    "name": "Toxel",
+    "number": "#198",
+    "types": ["Electric", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toxtricity.png",
+    "name": "Toxtricity",
+    "number": "#199",
+    "types": ["Electric", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dedenne.png",
+    "name": "Dedenne",
+    "number": "#200",
+    "types": ["Electric", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pachirisu.png",
+    "name": "Pachirisu",
+    "number": "#201",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shroodle.png",
+    "name": "Shroodle",
+    "number": "#202",
+    "types": ["Poison", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/grafaiai.png",
+    "name": "Grafaiai",
+    "number": "#203",
+    "types": ["Poison", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/stantler.png",
+    "name": "Stantler",
+    "number": "#204",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/foongus.png",
+    "name": "Foongus",
+    "number": "#205",
+    "types": ["Grass", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/amoonguss.png",
+    "name": "Amoonguss",
+    "number": "#206",
+    "types": ["Grass", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/voltorb.png",
+    "name": "Voltorb",
+    "number": "#207",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/electrode.png",
+    "name": "Electrode",
+    "number": "#208",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/magnemite.png",
+    "name": "Magnemite",
+    "number": "#209",
+    "types": ["Electric", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/magneton.png",
+    "name": "Magneton",
+    "number": "#210",
+    "types": ["Electric", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/magnezone.png",
+    "name": "Magnezone",
+    "number": "#211",
+    "types": ["Electric", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ditto.png",
+    "name": "Ditto",
+    "number": "#212",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/growlithe.png",
+    "name": "Growlithe",
+    "number": "#213",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/arcanine.png",
+    "name": "Arcanine",
+    "number": "#214",
+    "types": ["Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/teddiursa.png",
+    "name": "Teddiursa",
+    "number": "#215",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ursaring.png",
+    "name": "Ursaring",
+    "number": "#216",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/zangoose.png",
+    "name": "Zangoose",
+    "number": "#217",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/seviper.png",
+    "name": "Seviper",
+    "number": "#218",
+    "types": ["Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/swablu.png",
+    "name": "Swablu",
+    "number": "#219",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/altaria.png",
+    "name": "Altaria",
+    "number": "#220",
+    "types": ["Dragon", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/skiddo.png",
+    "name": "Skiddo",
+    "number": "#221",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gogoat.png",
+    "name": "Gogoat",
+    "number": "#222",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tauros.png",
+    "name": "Tauros",
+    "number": "#223",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/litleo.png",
+    "name": "Litleo",
+    "number": "#224",
+    "types": ["Fire", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pyroar.png",
+    "name": "Pyroar",
+    "number": "#225",
+    "types": ["Fire", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/stunky.png",
+    "name": "Stunky",
+    "number": "#226",
+    "types": ["Poison", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/skuntank.png",
+    "name": "Skuntank",
+    "number": "#227",
+    "types": ["Poison", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/zorua.png",
+    "name": "Zorua",
+    "number": "#228",
+    "types": ["Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/zoroark.png",
+    "name": "Zoroark",
+    "number": "#229",
+    "types": ["Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sneasel.png",
+    "name": "Sneasel",
+    "number": "#230",
+    "types": ["Dark", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/weavile.png",
+    "name": "Weavile",
+    "number": "#231",
+    "types": ["Dark", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/murkrow.png",
+    "name": "Murkrow",
+    "number": "#232",
+    "types": ["Dark", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/honchkrow.png",
+    "name": "Honchkrow",
+    "number": "#233",
+    "types": ["Dark", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gothita.png",
+    "name": "Gothita",
+    "number": "#234",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gothorita.png",
+    "name": "Gothorita",
+    "number": "#235",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gothitelle.png",
+    "name": "Gothitelle",
+    "number": "#236",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sinistea.png",
+    "name": "Sinistea",
+    "number": "#237",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/polteageist.png",
+    "name": "Polteageist",
+    "number": "#238",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mimikyu.png",
+    "name": "Mimikyu",
+    "number": "#239",
+    "types": ["Ghost", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/klefki.png",
+    "name": "Klefki",
+    "number": "#240",
+    "types": ["Steel", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/indeedee.png",
+    "name": "Indeedee",
+    "number": "#241",
+    "types": ["Psychic", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bramblin.png",
+    "name": "Bramblin",
+    "number": "#242",
+    "types": ["Grass", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/brambleghast.png",
+    "name": "Brambleghast",
+    "number": "#243",
+    "types": ["Grass", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toedscool.png",
+    "name": "Toedscool",
+    "number": "#244",
+    "types": ["Ground", "Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toedscruel.png",
+    "name": "Toedscruel",
+    "number": "#245",
+    "types": ["Ground", "Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tropius.png",
+    "name": "Tropius",
+    "number": "#246",
+    "types": ["Grass", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/fomantis.png",
+    "name": "Fomantis",
+    "number": "#247",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lurantis.png",
+    "name": "Lurantis",
+    "number": "#248",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/klawf.png",
+    "name": "Klawf",
+    "number": "#249",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/capsakid.png",
+    "name": "Capsakid",
+    "number": "#250",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/scovillain.png",
+    "name": "Scovillain",
+    "number": "#251",
+    "types": ["Grass", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cacnea.png",
+    "name": "Cacnea",
+    "number": "#252",
+    "types": ["Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cacturne.png",
+    "name": "Cacturne",
+    "number": "#253",
+    "types": ["Grass", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rellor.png",
+    "name": "Rellor",
+    "number": "#254",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rabsca.png",
+    "name": "Rabsca",
+    "number": "#255",
+    "types": ["Bug", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/venonat.png",
+    "name": "Venonat",
+    "number": "#256",
+    "types": ["Bug", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/venomoth.png",
+    "name": "Venomoth",
+    "number": "#257",
+    "types": ["Bug", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pineco.png",
+    "name": "Pineco",
+    "number": "#258",
+    "types": ["Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/forretress.png",
+    "name": "Forretress",
+    "number": "#259",
+    "types": ["Bug", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/scyther.png",
+    "name": "Scyther",
+    "number": "#260",
+    "types": ["Bug", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/scizor.png",
+    "name": "Scizor",
+    "number": "#261",
+    "types": ["Bug", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/heracross.png",
+    "name": "Heracross",
+    "number": "#262",
+    "types": ["Bug", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flittle.png",
+    "name": "Flittle",
+    "number": "#263",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/espathra.png",
+    "name": "Espathra",
+    "number": "#264",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hippopotas.png",
+    "name": "Hippopotas",
+    "number": "#265",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hippowdon.png",
+    "name": "Hippowdon",
+    "number": "#266",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sandile.png",
+    "name": "Sandile",
+    "number": "#267",
+    "types": ["Ground", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/krokorok.png",
+    "name": "Krokorok",
+    "number": "#268",
+    "types": ["Ground", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/krookodile.png",
+    "name": "Krookodile",
+    "number": "#269",
+    "types": ["Ground", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/silicobra.png",
+    "name": "Silicobra",
+    "number": "#270",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sandaconda.png",
+    "name": "Sandaconda",
+    "number": "#271",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mudbray.png",
+    "name": "Mudbray",
+    "number": "#272",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mudsdale.png",
+    "name": "Mudsdale",
+    "number": "#273",
+    "types": ["Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/larvesta.png",
+    "name": "Larvesta",
+    "number": "#274",
+    "types": ["Bug", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/volcarona.png",
+    "name": "Volcarona",
+    "number": "#275",
+    "types": ["Bug", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bagon.png",
+    "name": "Bagon",
+    "number": "#276",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shelgon.png",
+    "name": "Shelgon",
+    "number": "#277",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/salamence.png",
+    "name": "Salamence",
+    "number": "#278",
+    "types": ["Dragon", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tinkatink.png",
+    "name": "Tinkatink",
+    "number": "#279",
+    "types": ["Fairy", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tinkatuff.png",
+    "name": "Tinkatuff",
+    "number": "#280",
+    "types": ["Fairy", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tinkaton.png",
+    "name": "Tinkaton",
+    "number": "#281",
+    "types": ["Fairy", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hatenna.png",
+    "name": "Hatenna",
+    "number": "#282",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hattrem.png",
+    "name": "Hattrem",
+    "number": "#283",
+    "types": ["Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hatterene.png",
+    "name": "Hatterene",
+    "number": "#284",
+    "types": ["Psychic", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/impidimp.png",
+    "name": "Impidimp",
+    "number": "#285",
+    "types": ["Dark", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/morgrem.png",
+    "name": "Morgrem",
+    "number": "#286",
+    "types": ["Dark", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/grimmsnarl.png",
+    "name": "Grimmsnarl",
+    "number": "#287",
+    "types": ["Dark", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wiglett.png",
+    "name": "Wiglett",
+    "number": "#288",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wugtrio.png",
+    "name": "Wugtrio",
+    "number": "#289",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bombirdier.png",
+    "name": "Bombirdier",
+    "number": "#290",
+    "types": ["Flying", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/finizen.png",
+    "name": "Finizen",
+    "number": "#291",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/palafin.png",
+    "name": "Palafin",
+    "number": "#292",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/varoom.png",
+    "name": "Varoom",
+    "number": "#293",
+    "types": ["Steel", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/revavroom.png",
+    "name": "Revavroom",
+    "number": "#294",
+    "types": ["Steel", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cyclizar.png",
+    "name": "Cyclizar",
+    "number": "#295",
+    "types": ["Dragon", "Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/orthworm.png",
+    "name": "Orthworm",
+    "number": "#296",
+    "types": ["Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sableye.png",
+    "name": "Sableye",
+    "number": "#297",
+    "types": ["Dark", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shuppet.png",
+    "name": "Shuppet",
+    "number": "#298",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/banette.png",
+    "name": "Banette",
+    "number": "#299",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/falinks.png",
+    "name": "Falinks",
+    "number": "#300",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hawlucha.png",
+    "name": "Hawlucha",
+    "number": "#301",
+    "types": ["Fighting", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/spiritomb.png",
+    "name": "Spiritomb",
+    "number": "#302",
+    "types": ["Ghost", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/noibat.png",
+    "name": "Noibat",
+    "number": "#303",
+    "types": ["Flying", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/noivern.png",
+    "name": "Noivern",
+    "number": "#304",
+    "types": ["Flying", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dreepy.png",
+    "name": "Dreepy",
+    "number": "#305",
+    "types": ["Dragon", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/drakloak.png",
+    "name": "Drakloak",
+    "number": "#306",
+    "types": ["Dragon", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dragapult.png",
+    "name": "Dragapult",
+    "number": "#307",
+    "types": ["Dragon", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/glimmet.png",
+    "name": "Glimmet",
+    "number": "#308",
+    "types": ["Rock", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/glimmora.png",
+    "name": "Glimmora",
+    "number": "#309",
+    "types": ["Rock", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rotom.png",
+    "name": "Rotom",
+    "number": "#310",
+    "types": ["Electric", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/greavard.png",
+    "name": "Greavard",
+    "number": "#311",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/houndstone.png",
+    "name": "Houndstone",
+    "number": "#312",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/oranguru.png",
+    "name": "Oranguru",
+    "number": "#313",
+    "types": ["Normal", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/passimian.png",
+    "name": "Passimian",
+    "number": "#314",
+    "types": ["Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/komala.png",
+    "name": "Komala",
+    "number": "#315",
+    "types": ["Normal"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/larvitar.png",
+    "name": "Larvitar",
+    "number": "#316",
+    "types": ["Rock", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pupitar.png",
+    "name": "Pupitar",
+    "number": "#317",
+    "types": ["Rock", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tyranitar.png",
+    "name": "Tyranitar",
+    "number": "#318",
+    "types": ["Rock", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/stonjourner.png",
+    "name": "Stonjourner",
+    "number": "#319",
+    "types": ["Rock"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/eiscue.png",
+    "name": "Eiscue",
+    "number": "#320",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pincurchin.png",
+    "name": "Pincurchin",
+    "number": "#321",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sandygast.png",
+    "name": "Sandygast",
+    "number": "#322",
+    "types": ["Ghost", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/palossand.png",
+    "name": "Palossand",
+    "number": "#323",
+    "types": ["Ghost", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slowpoke.png",
+    "name": "Slowpoke",
+    "number": "#324",
+    "types": ["Water", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slowbro.png",
+    "name": "Slowbro",
+    "number": "#325",
+    "types": ["Water", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slowking.png",
+    "name": "Slowking",
+    "number": "#326",
+    "types": ["Water", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shellos.png",
+    "name": "Shellos",
+    "number": "#327",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gastrodon.png",
+    "name": "Gastrodon",
+    "number": "#328",
+    "types": ["Water", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/shellder.png",
+    "name": "Shellder",
+    "number": "#329",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cloyster.png",
+    "name": "Cloyster",
+    "number": "#330",
+    "types": ["Water", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/qwilfish.png",
+    "name": "Qwilfish",
+    "number": "#331",
+    "types": ["Water", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/luvdisc.png",
+    "name": "Luvdisc",
+    "number": "#332",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/finneon.png",
+    "name": "Finneon",
+    "number": "#333",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lumineon.png",
+    "name": "Lumineon",
+    "number": "#334",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bruxish.png",
+    "name": "Bruxish",
+    "number": "#335",
+    "types": ["Water", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/alomomola.png",
+    "name": "Alomomola",
+    "number": "#336",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/skrelp.png",
+    "name": "Skrelp",
+    "number": "#337",
+    "types": ["Poison", "Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dragalge.png",
+    "name": "Dragalge",
+    "number": "#338",
+    "types": ["Poison", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/clauncher.png",
+    "name": "Clauncher",
+    "number": "#339",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/clawitzer.png",
+    "name": "Clawitzer",
+    "number": "#340",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tynamo.png",
+    "name": "Tynamo",
+    "number": "#341",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/eelektrik.png",
+    "name": "Eelektrik",
+    "number": "#342",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/eelektross.png",
+    "name": "Eelektross",
+    "number": "#343",
+    "types": ["Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mareanie.png",
+    "name": "Mareanie",
+    "number": "#344",
+    "types": ["Poison", "Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toxapex.png",
+    "name": "Toxapex",
+    "number": "#345",
+    "types": ["Poison", "Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flamigo.png",
+    "name": "Flamigo",
+    "number": "#346",
+    "types": ["Flying", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dratini.png",
+    "name": "Dratini",
+    "number": "#347",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dragonair.png",
+    "name": "Dragonair",
+    "number": "#348",
+    "types": ["Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dragonite.png",
+    "name": "Dragonite",
+    "number": "#349",
+    "types": ["Dragon", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/snom.png",
+    "name": "Snom",
+    "number": "#350",
+    "types": ["Ice", "Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/frosmoth.png",
+    "name": "Frosmoth",
+    "number": "#351",
+    "types": ["Ice", "Bug"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/snover.png",
+    "name": "Snover",
+    "number": "#352",
+    "types": ["Grass", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/abomasnow.png",
+    "name": "Abomasnow",
+    "number": "#353",
+    "types": ["Grass", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/delibird.png",
+    "name": "Delibird",
+    "number": "#354",
+    "types": ["Ice", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cubchoo.png",
+    "name": "Cubchoo",
+    "number": "#355",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/beartic.png",
+    "name": "Beartic",
+    "number": "#356",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/snorunt.png",
+    "name": "Snorunt",
+    "number": "#357",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/glalie.png",
+    "name": "Glalie",
+    "number": "#358",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/froslass.png",
+    "name": "Froslass",
+    "number": "#359",
+    "types": ["Ice", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cryogonal.png",
+    "name": "Cryogonal",
+    "number": "#360",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cetoddle.png",
+    "name": "Cetoddle",
+    "number": "#361",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/cetitan.png",
+    "name": "Cetitan",
+    "number": "#362",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bergmite.png",
+    "name": "Bergmite",
+    "number": "#363",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/avalugg.png",
+    "name": "Avalugg",
+    "number": "#364",
+    "types": ["Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rufflet.png",
+    "name": "Rufflet",
+    "number": "#365",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/braviary.png",
+    "name": "Braviary",
+    "number": "#366",
+    "types": ["Normal", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pawniard.png",
+    "name": "Pawniard",
+    "number": "#367",
+    "types": ["Dark", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/bisharp.png",
+    "name": "Bisharp",
+    "number": "#368",
+    "types": ["Dark", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kingambit.png",
+    "name": "Kingambit",
+    "number": "#369",
+    "types": ["Dark", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/deino.png",
+    "name": "Deino",
+    "number": "#370",
+    "types": ["Dark", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/zweilous.png",
+    "name": "Zweilous",
+    "number": "#371",
+    "types": ["Dark", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hydreigon.png",
+    "name": "Hydreigon",
+    "number": "#372",
+    "types": ["Dark", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/veluza.png",
+    "name": "Veluza",
+    "number": "#373",
+    "types": ["Water", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dondozo.png",
+    "name": "Dondozo",
+    "number": "#374",
+    "types": ["Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tatsugiri.png",
+    "name": "Tatsugiri",
+    "number": "#375",
+    "types": ["Dragon", "Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/great-tusk.png",
+    "name": "Great Tusk",
+    "number": "#376",
+    "types": ["Ground", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/scream-tail.png",
+    "name": "Scream Tail",
+    "number": "#377",
+    "types": ["Fairy", "Psychic"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/brute-bonnet.png",
+    "name": "Brute Bonnet",
+    "number": "#378",
+    "types": ["Grass", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flutter-mane.png",
+    "name": "Flutter Mane",
+    "number": "#379",
+    "types": ["Ghost", "Fairy"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slither-wing.png",
+    "name": "Slither Wing",
+    "number": "#380",
+    "types": ["Bug", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sandy-shocks.png",
+    "name": "Sandy Shocks",
+    "number": "#381",
+    "types": ["Electric", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-treads.png",
+    "name": "Iron Treads",
+    "number": "#382",
+    "types": ["Ground", "Steel"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-bundle.png",
+    "name": "Iron Bundle",
+    "number": "#383",
+    "types": ["Ice", "Water"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-hands.png",
+    "name": "Iron Hands",
+    "number": "#384",
+    "types": ["Fighting", "Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-jugulis.png",
+    "name": "Iron Jugulis",
+    "number": "#385",
+    "types": ["Dark", "Flying"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-moth.png",
+    "name": "Iron Moth",
+    "number": "#386",
+    "types": ["Fire", "Poison"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-thorns.png",
+    "name": "Iron Thorns",
+    "number": "#387",
+    "types": ["Rock", "Electric"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/frigibax.png",
+    "name": "Frigibax",
+    "number": "#388",
+    "types": ["Dragon", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/arctibax.png",
+    "name": "Arctibax",
+    "number": "#389",
+    "types": ["Dragon", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/baxcalibur.png",
+    "name": "Baxcalibur",
+    "number": "#390",
+    "types": ["Dragon", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gimmighoul.png",
+    "name": "Gimmighoul",
+    "number": "#391",
+    "types": ["Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gholdengo.png",
+    "name": "Gholdengo",
+    "number": "#392",
+    "types": ["Steel", "Ghost"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/wo-chien.png",
+    "name": "Wo-Chien",
+    "number": "#393",
+    "types": ["Dark", "Grass"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/chien-pao.png",
+    "name": "Chien-Pao",
+    "number": "#394",
+    "types": ["Dark", "Ice"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ting-lu.png",
+    "name": "Ting-Lu",
+    "number": "#395",
+    "types": ["Dark", "Ground"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/chi-yu.png",
+    "name": "Chi-Yu",
+    "number": "#396",
+    "types": ["Dark", "Fire"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/roaring-moon.png",
+    "name": "Roaring Moon",
+    "number": "#397",
+    "types": ["Dragon", "Dark"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-valiant.png",
+    "name": "Iron Valiant",
+    "number": "#398",
+    "types": ["Fairy", "Fighting"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/koraidon.png",
+    "name": "Koraidon",
+    "number": "#399",
+    "types": ["Fighting", "Dragon"]
+  },
+  {
+    "img": "https://img.pokemondb.net/sprites/scarlet-violet/normal/miraidon.png",
+    "name": "Miraidon",
+    "number": "#400",
+    "types": ["Electric", "Dragon"]
+  }
+]

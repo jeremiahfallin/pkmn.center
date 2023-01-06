@@ -1,38 +1,49 @@
-import NextAuth, { NextAuthOptions } from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
+import NextAuth from 'next-auth/next';
+import DiscordProvider from 'next-auth/providers/discord';
 
-export const authOptions: NextAuthOptions = {
+// Prisma adapter for NextAuth, optional and can be removed
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { prisma } from 'server/db/client';
+import { env } from 'server/env';
+
+export const authOptions = {
+  // Include user.id on session
+  callbacks: {
+    session({ session, user }: any) {
+      if (session.user) {
+        session.user.id = user.id;
+      }
+      return session;
+    },
+  },
+  // Configure one or more authentication providers
+  adapter: PrismaAdapter(prisma),
   providers: [
-    CredentialsProvider({
-      // The name to display on the sign in form (e.g. 'Sign in with...')
-      name: 'Next Auth',
-      // The credentials is used to generate a suitable form on the sign in page.
-      // You can specify whatever fields you are expecting to be submitted.
-      // e.g. domain, username, password, 2FA token, etc.
-      // You can pass any HTML attribute to the <input> tag through the object.
-      credentials: {
-        username: {
-          label: 'Username',
-          type: 'text',
-          placeholder: 'Any credentials work',
-        },
-        password: { label: 'Password', type: 'password' },
-      },
-      async authorize(credentials) {
-        // You need to provide your own logic here that takes the credentials
-        // submitted and returns either a object representing a user or value
-        // that is false/null if the credentials are invalid.
-        // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
-        // You can also use the `req` object to obtain additional parameters
-        // (i.e., the request IP address)
+    DiscordProvider({
+      clientId: env.DISCORD_CLIENT_ID,
+      clientSecret: env.DISCORD_CLIENT_SECRET,
+      profile(profile) {
+        let image_url: string;
 
-        const user = { id: 1, name: 'J Smith', email: credentials?.username };
+        if (profile.avatar === null) {
+          const defaultAvatarNumber = parseInt(profile.discriminator, 10) % 5;
+          image_url = `https://cdn.discordapp.com/embed/avatars/${defaultAvatarNumber}.png`;
+        } else {
+          const format = profile.avatar.startsWith('a_') ? 'gif' : 'png';
+          image_url = `https://cdn.discordapp.com/avatars/${profile.id}/${profile.avatar}.${format}`;
+        }
 
-        return user;
+        return {
+          id: profile.id,
+          name: profile.username,
+          discriminator: profile.discriminator,
+          image: image_url,
+          email: profile.email,
+          emailVerified: profile.verified,
+        };
       },
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
 };
 
 export default NextAuth(authOptions);

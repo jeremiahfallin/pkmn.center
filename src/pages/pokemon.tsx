@@ -2,10 +2,18 @@ import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
 import Container from 'components/Container';
 import PokeCard from 'components/PokeCard';
-import TradingFormCard from 'components/TradingFormCard';
 import { trpc } from 'utils/trpc';
-import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
-import PokeListing from 'components/PokeListing';
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  Spinner,
+} from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import Fuse from 'fuse.js';
 
 function PokeCardEmpty() {
   return (
@@ -21,9 +29,12 @@ function PokeCardEmpty() {
   );
 }
 
-const HomePage: NextPage = () => {
-  const { data, error, status } = trpc.pokemonRouter.getAllListings.useQuery({
-    limit: 6,
+const PokemonSearchPage: NextPage = () => {
+  const { data, error, status } = trpc.pokemonRouter.getAll.useQuery();
+  const router = useRouter();
+
+  const fuse = new Fuse(data ?? [], {
+    keys: ['name'],
   });
 
   return (
@@ -32,6 +43,7 @@ const HomePage: NextPage = () => {
         <Flex justify="center" align="center" maxW="4xl" pb={48}>
           <Box textAlign={'center'}>
             <Heading py={4}>Pokemon</Heading>
+
             {status === 'loading' ? (
               <PokeCardEmpty />
             ) : status === 'error' ? (
@@ -48,9 +60,20 @@ const HomePage: NextPage = () => {
                   }}
                   gap={8}
                 >
-                  {data?.map((listing) => {
-                    return <PokeListing pokemon={listing} />;
-                  })}
+                  {fuse
+                    .search(router.query.search as string)
+                    .slice(0, 20)
+                    .map((result) => {
+                      return (
+                        <LinkBox key={result.item.id}>
+                          <PokeCard
+                            id={result.item.id}
+                            image={result.item.image}
+                            name={result.item.name}
+                          />
+                        </LinkBox>
+                      );
+                    })}
                 </Grid>
               </>
             )}
@@ -61,4 +84,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default PokemonSearchPage;

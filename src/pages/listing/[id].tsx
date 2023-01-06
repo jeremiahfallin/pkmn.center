@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import Container from 'components/Container';
 import PokeCard from 'components/PokeCard';
-import TradingFormCard from 'components/TradingFormCard';
 import { trpc } from 'utils/trpc';
 import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
 import PokeListing from 'components/PokeListing';
@@ -21,10 +21,14 @@ function PokeCardEmpty() {
   );
 }
 
-const HomePage: NextPage = () => {
-  const { data, error, status } = trpc.pokemonRouter.getAllListings.useQuery({
-    limit: 6,
-  });
+const ProfilePage: NextPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const { data, error, status } = trpc.pokemonRouter.getListing.useQuery(
+    typeof id === 'string' ? id : '',
+  );
+
+  console.log(data);
 
   return (
     <Suspense fallback={null}>
@@ -32,6 +36,7 @@ const HomePage: NextPage = () => {
         <Flex justify="center" align="center" maxW="4xl" pb={48}>
           <Box textAlign={'center'}>
             <Heading py={4}>Pokemon</Heading>
+
             {status === 'loading' ? (
               <PokeCardEmpty />
             ) : status === 'error' ? (
@@ -40,6 +45,11 @@ const HomePage: NextPage = () => {
               </>
             ) : (
               <>
+                <PokeCard
+                  id={data?.pokemon.id ?? 1}
+                  name={data?.pokemon.name ?? ''}
+                  image={data?.pokemon.image ?? ''}
+                />
                 <Grid
                   templateColumns={{
                     base: 'repeat(1, 1fr)',
@@ -48,8 +58,8 @@ const HomePage: NextPage = () => {
                   }}
                   gap={8}
                 >
-                  {data?.map((listing) => {
-                    return <PokeListing pokemon={listing} />;
+                  {data?.offers.map((offer) => {
+                    return <PokeListing pokemon={offer} />;
                   })}
                 </Grid>
               </>
@@ -61,4 +71,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default ProfilePage;

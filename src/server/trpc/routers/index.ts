@@ -7,6 +7,8 @@ import ssgRouter from 'feature/ssg/router';
 
 import { t } from '../trpc';
 import { sourceRouter } from './source';
+import { pokemonRouter } from './pokemon';
+import { profileRouter } from './profile';
 
 /**
  * In tRPC v10 the root router is created by the same function as child
@@ -21,5 +23,7 @@ export const appRouter = t.router({
   ssgRouter: ssgRouter,
   authRouter: authRouter,
   reactHookFormRouter: reactHookFormRouter,
+  pokemonRouter: pokemonRouter,
+  profileRouter: profileRouter,
 });
 export type AppRouter = typeof appRouter;
