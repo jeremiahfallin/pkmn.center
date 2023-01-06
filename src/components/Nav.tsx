@@ -1,7 +1,12 @@
-import { useState } from 'react';
-import NextLink from 'next/link';
-import { useRouter } from 'next/router';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import {
+  AtSignIcon,
+  HamburgerIcon,
+  MoonIcon,
+  RepeatIcon,
+  SearchIcon,
+  SmallCloseIcon,
+  SunIcon,
+} from '@chakra-ui/icons';
 import {
   Box,
   Flex,
@@ -20,16 +25,12 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  AtSignIcon,
-  RepeatIcon,
-  SmallCloseIcon,
-  SunIcon,
-  MoonIcon,
-  SearchIcon,
-} from '@chakra-ui/icons';
 import NavItem from 'components/NavItem';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import { signIn, signOut, useSession } from 'next-auth/react';
+import { useState } from 'react';
+
 import ThemeSwitcher from './ThemeSwitcher';
 
 const Nav = () => {

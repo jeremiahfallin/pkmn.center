@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
 import { Link } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
 interface INavItemMobile {
   icon?: JSX.Element;

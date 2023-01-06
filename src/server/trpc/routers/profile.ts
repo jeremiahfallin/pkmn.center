@@ -1,7 +1,7 @@
-import { t } from 'server/trpc/trpc';
 import { TRPCError } from '@trpc/server';
-import { z } from 'zod';
 import { prisma } from 'server/db/client';
+import { t } from 'server/trpc/trpc';
+import { z } from 'zod';
 
 const authMiddleware = t.middleware(async ({ ctx, next }) => {
   // Any queries or mutations after this middleware will

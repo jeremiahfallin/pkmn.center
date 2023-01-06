@@ -1,11 +1,11 @@
-import React, { Suspense } from 'react';
-import type { NextPage } from 'next';
+import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
 import Container from 'components/Container';
 import PokeCard from 'components/PokeCard';
-import TradingFormCard from 'components/TradingFormCard';
-import { trpc } from 'utils/trpc';
-import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
 import PokeListing from 'components/PokeListing';
+import TradingFormCard from 'components/TradingFormCard';
+import type { NextPage } from 'next';
+import React, { Suspense } from 'react';
+import { trpc } from 'utils/trpc';
 
 function PokeCardEmpty() {
   return (

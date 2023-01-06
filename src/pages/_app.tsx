@@ -1,7 +1,7 @@
-import { AppType } from 'next/dist/shared/lib/utils';
-import { trpc } from 'utils/trpc';
-import { SessionProvider } from 'next-auth/react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { AppType } from 'next/dist/shared/lib/utils';
+import { SessionProvider } from 'next-auth/react';
+import { trpc } from 'utils/trpc';
 
 export const theme = extendTheme({
   config: {

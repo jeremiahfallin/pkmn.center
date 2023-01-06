@@ -1,6 +1,7 @@
-import { ReactElement } from 'react';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ColorModeScript } from '@chakra-ui/react';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { ReactElement } from 'react';
+
 import { theme } from './_app';
 
 class MyDocument extends Document {

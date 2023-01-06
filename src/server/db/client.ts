@@ -1,7 +1,9 @@
 // src/server/db/client.ts
 import { PrismaClient } from '@prisma/client';
+
 import { env } from '../env';
 
+// eslint-disable-next-line @typescript-eslint/no-names
 declare global {
   var prisma: PrismaClient | undefined;
 }

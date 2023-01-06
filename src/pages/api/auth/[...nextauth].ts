@@ -1,8 +1,7 @@
-import NextAuth from 'next-auth/next';
-import DiscordProvider from 'next-auth/providers/discord';
-
 // Prisma adapter for NextAuth, optional and can be removed
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import NextAuth from 'next-auth/next';
+import DiscordProvider from 'next-auth/providers/discord';
 import { prisma } from 'server/db/client';
 import { env } from 'server/env';
 

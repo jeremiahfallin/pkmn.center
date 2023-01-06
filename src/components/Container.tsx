@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
-import NextLink from 'next/link';
-import { NextSeo } from 'next-seo';
-import Nav from 'components/Nav';
 import { Box, Flex } from '@chakra-ui/react';
+import Nav from 'components/Nav';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
 type ContainerProps = {
   children: React.ReactNode;

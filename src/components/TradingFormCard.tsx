@@ -1,18 +1,19 @@
-import Image from 'next/image';
 import {
+  Box,
+  Button,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
+  CardHeader,
+  CloseButton,
   Divider,
   Flex,
   Heading,
-  CloseButton,
   Text,
-  Button,
-  Box,
   useDisclosure,
 } from '@chakra-ui/react';
+import Image from 'next/image';
+
 import TradingFormDrawer from './TradingFormDrawer';
 
 export default function TradingFormCard({

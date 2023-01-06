@@ -1,15 +1,15 @@
-import Image from 'next/image';
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
+  CardHeader,
   Divider,
   Flex,
   Heading,
-  Text,
   Stack,
+  Text,
 } from '@chakra-ui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PokeListing({ pokemon }: any): JSX.Element {

@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { useSession } from 'next-auth/react';
-import PokeCard from 'components/PokeCard';
-import { trpc } from 'utils/trpc';
-import Rate from 'rc-rate';
 import 'rc-rate/assets/index.css';
+
 import { Box } from '@chakra-ui/react';
+import PokeCard from 'components/PokeCard';
+import { useSession } from 'next-auth/react';
+import Rate from 'rc-rate';
+import { useState } from 'react';
+import { trpc } from 'utils/trpc';
 
 export default function PokeRate(pokemon: any) {
   const { data: session } = useSession();

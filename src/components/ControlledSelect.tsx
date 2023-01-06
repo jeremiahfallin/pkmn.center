@@ -1,7 +1,7 @@
+import { FormControl, FormErrorMessage, FormLabel } from '@chakra-ui/react';
+import { Select } from 'chakra-react-select';
 import React from 'react';
 import { useController } from 'react-hook-form';
-import { FormErrorMessage, FormLabel, FormControl } from '@chakra-ui/react';
-import { Select } from 'chakra-react-select';
 
 function ControlledSelect({
   name,

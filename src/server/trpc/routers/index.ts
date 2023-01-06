@@ -6,9 +6,9 @@ import { reactHookFormRouter } from 'feature/react-hook-form/router';
 import ssgRouter from 'feature/ssg/router';
 
 import { t } from '../trpc';
-import { sourceRouter } from './source';
 import { pokemonRouter } from './pokemon';
 import { profileRouter } from './profile';
+import { sourceRouter } from './source';
 
 /**
  * In tRPC v10 the root router is created by the same function as child

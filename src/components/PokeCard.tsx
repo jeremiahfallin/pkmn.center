@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useSession } from 'next-auth/react';
+import 'rc-rate/assets/index.css';
+
 import {
   Box,
   Card,
@@ -9,8 +8,10 @@ import {
   Heading,
   LinkOverlay,
 } from '@chakra-ui/react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/react';
 import Rate from 'rc-rate';
-import 'rc-rate/assets/index.css';
 
 type PokeCardProps = {
   id: number;

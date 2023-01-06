@@ -1,8 +1,3 @@
-import React, { Suspense } from 'react';
-import type { NextPage } from 'next';
-import Container from 'components/Container';
-import PokeCard from 'components/PokeCard';
-import { trpc } from 'utils/trpc';
 import {
   Box,
   Flex,
@@ -12,8 +7,13 @@ import {
   LinkOverlay,
   Spinner,
 } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import Container from 'components/Container';
+import PokeCard from 'components/PokeCard';
 import Fuse from 'fuse.js';
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import React, { Suspense } from 'react';
+import { trpc } from 'utils/trpc';
 
 function PokeCardEmpty() {
   return (

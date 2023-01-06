@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { useColorMode } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
   const [isMounted, setIsMounted] = useState(false);

@@ -1,26 +1,26 @@
-import React, { Suspense, useState } from 'react';
-import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import Container from 'components/Container';
-import { trpc } from 'utils/trpc';
 import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
   Flex,
   Heading,
   Spinner,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Tabs,
-  TabList,
   Tab,
-  TabPanels,
+  TabList,
   TabPanel,
+  TabPanels,
+  Tabs,
 } from '@chakra-ui/react';
-import Image from 'next/image';
+import Container from 'components/Container';
 import PokeListing from 'components/PokeListing';
+import type { NextPage } from 'next';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import React, { Suspense, useState } from 'react';
+import { trpc } from 'utils/trpc';
 
 function PokeCardEmpty() {
   return (
