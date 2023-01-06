@@ -3,8 +3,8 @@ import { PrismaClient } from '@prisma/client';
 
 import { env } from '../env';
 
-// eslint-disable-next-line @typescript-eslint/no-names
 declare global {
+  // tslint:disable-next-line
   var prisma: PrismaClient | undefined;
 }
 

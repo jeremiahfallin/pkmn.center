@@ -70,6 +70,7 @@ export default function PokeListing({ pokemon }: any): JSX.Element {
           <CardFooter py={2}>
             {pokemon.offers?.map((offer: any) => (
               <Image
+                key={offer.pokemon.id}
                 src={offer.pokemon.image}
                 alt={offer.pokemon.name}
                 width={75}

@@ -91,11 +91,7 @@ const Nav = () => {
             >
               <InputGroup>
                 <InputLeftAddon p={0} borderRadius={0} borderLeftRadius="md">
-                  <Select
-                    borderRadius={0}
-                    borderLeftRadius="md"
-                    onChange={(e) => {}}
-                  >
+                  <Select borderRadius={0} borderLeftRadius="md">
                     <option value="pokemon">Pokemon</option>
                     <option value="users">Trainers</option>
                   </Select>

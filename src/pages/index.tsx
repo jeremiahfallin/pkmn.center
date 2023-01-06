@@ -49,7 +49,7 @@ const HomePage: NextPage = () => {
                   gap={8}
                 >
                   {data?.map((listing) => {
-                    return <PokeListing pokemon={listing} />;
+                    return <PokeListing key={listing.id} pokemon={listing} />;
                   })}
                 </Grid>
               </>

@@ -59,7 +59,7 @@ const ProfilePage: NextPage = () => {
                   gap={8}
                 >
                   {data?.offers.map((offer) => {
-                    return <PokeListing pokemon={offer} />;
+                    return <PokeListing key={offer.id} pokemon={offer} />;
                   })}
                 </Grid>
               </>
