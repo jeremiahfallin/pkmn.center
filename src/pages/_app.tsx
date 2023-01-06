@@ -1,5 +1,6 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { AppType } from 'next/dist/shared/lib/utils';
+import { Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
 import { trpc } from 'utils/trpc';
 
@@ -31,7 +32,7 @@ export const theme = extendTheme({
   },
 });
 
-const MyApp: AppType = ({
+const MyApp: AppType<{ session: Session }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
