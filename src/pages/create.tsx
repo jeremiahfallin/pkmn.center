@@ -122,7 +122,7 @@ const HomePage: NextPage = () => {
             ) : (
               <form
                 onSubmit={methods.handleSubmit(async (data) => {
-                  const res = await createListing.mutateAsync(data);
+                  const res = await createListing.mutateAsync(data as any);
                   console.log(res);
                   methods.reset();
                 })}
