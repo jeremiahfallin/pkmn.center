@@ -1,12 +1,12 @@
 import { Box } from '@chakra-ui/react';
 import {
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
   Radar,
   RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
   ResponsiveContainer,
   Tooltip,
-  PolarRadiusAxis,
 } from 'recharts';
 
 const numberToValue = [

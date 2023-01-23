@@ -6,18 +6,19 @@ import {
   CardFooter,
   CardHeader,
   Divider,
-  Grid,
   Flex,
-  Heading,
-  Stack,
-  LinkOverlay,
+  Grid,
   GridItem,
+  Heading,
+  LinkOverlay,
+  Stack,
   VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import PokeStatChart from './PokeStatChart';
-import PokeDetails from './PokeDetails';
 import { trpc } from 'utils/trpc';
+
+import PokeDetails from './PokeDetails';
+import PokeStatChart from './PokeStatChart';
 
 export default function PokeListingOffer({
   pokemon,

@@ -5,14 +5,14 @@ import {
   Grid,
   Heading,
   HStack,
-  Spinner,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
-  VStack,
   SimpleGrid,
+  Spinner,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  VStack,
 } from '@chakra-ui/react';
 import Container from 'components/Container';
 import PokeListing from 'components/PokeListing';

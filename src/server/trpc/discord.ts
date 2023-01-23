@@ -1,10 +1,10 @@
 import {
+  ChannelType,
   Client,
   Events,
   GatewayIntentBits,
-  ChannelType,
-  PermissionsBitField,
   Guild,
+  PermissionsBitField,
 } from 'discord.js';
 
 const sendMessage = (

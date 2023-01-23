@@ -14,9 +14,10 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import PokeStatChart, { Offer, UserOffer } from './PokeStatChart';
-import PokeDetails from './PokeDetails';
 import { trpc } from 'utils/trpc';
+
+import PokeDetails from './PokeDetails';
+import PokeStatChart, { Offer, UserOffer } from './PokeStatChart';
 
 export default function PokeTrade({
   pokemon,
@@ -32,7 +33,7 @@ export default function PokeTrade({
     <>
       {pokemon.userOffer.map((userOffer: UserOffer) => {
         return (
-          <Card direction="column">
+          <Card direction="column" key={userOffer.id}>
             <CardBody p={2}>
               <Grid gridTemplateColumns={'repeat(3, 1fr)'}>
                 <VStack justify="center">

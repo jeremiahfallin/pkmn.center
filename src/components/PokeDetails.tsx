@@ -1,4 +1,5 @@
 import { Box, Flex, Image, Tag } from '@chakra-ui/react';
+
 import { Listing, Offer } from './PokeStatChart';
 
 export default function PokeDetails({ pokemon }: { pokemon: Offer | Listing }) {

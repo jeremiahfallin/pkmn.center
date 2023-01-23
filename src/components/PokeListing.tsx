@@ -8,12 +8,13 @@ import {
   Grid,
   Heading,
   HStack,
+  Link,
   LinkBox,
   LinkOverlay,
-  Link,
   VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+
 import PokeDetails from './PokeDetails';
 import PokeStatChart from './PokeStatChart';
 

@@ -8,16 +8,15 @@ import {
   Spinner,
   Text,
 } from '@chakra-ui/react';
+import { Intl, Temporal, toTemporalInstant } from '@js-temporal/polyfill';
 import Container from 'components/Container';
 import PokeListingOffer from 'components/PokeListingOffer';
+import PokeStatChart from 'components/PokeStatChart';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import React, { Suspense } from 'react';
-import { Temporal, Intl, toTemporalInstant } from '@js-temporal/polyfill';
-import { trpc } from 'utils/trpc';
-import PokeStatChart from 'components/PokeStatChart';
-
 import { useSession } from 'next-auth/react';
+import React, { Suspense } from 'react';
+import { trpc } from 'utils/trpc';
 
 Date.prototype.toTemporalInstant = toTemporalInstant;
 

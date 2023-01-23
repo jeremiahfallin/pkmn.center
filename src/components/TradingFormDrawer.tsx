@@ -19,9 +19,9 @@ import {
   NumberInputField,
   NumberInputStepper,
   RangeSlider,
-  RangeSliderTrack,
   RangeSliderFilledTrack,
   RangeSliderThumb,
+  RangeSliderTrack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { Controller } from 'react-hook-form';
