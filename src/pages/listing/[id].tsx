@@ -1,11 +1,25 @@
-import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
+import {
+  Box,
+  Card,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Spinner,
+  Text,
+} from '@chakra-ui/react';
 import Container from 'components/Container';
-import PokeCard from 'components/PokeCard';
-import PokeListing from 'components/PokeListing';
+import PokeListingOffer from 'components/PokeListingOffer';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React, { Suspense } from 'react';
+import { Temporal, Intl, toTemporalInstant } from '@js-temporal/polyfill';
 import { trpc } from 'utils/trpc';
+import PokeStatChart from 'components/PokeStatChart';
+
+import { useSession } from 'next-auth/react';
+
+Date.prototype.toTemporalInstant = toTemporalInstant;
 
 function PokeCardEmpty() {
   return (
@@ -21,22 +35,31 @@ function PokeCardEmpty() {
   );
 }
 
-const ProfilePage: NextPage = () => {
+const ListingPage: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const { data, error, status } = trpc.pokemonRouter.getListing.useQuery(
     typeof id === 'string' ? id : '',
   );
+  const { data: session } = useSession();
 
-  console.log(data);
+  const today = Temporal.Now.plainDateTimeISO();
+  let createdAt = data?.createdAt.toTemporalInstant();
+  if (data?.createdAt.toTemporalInstant() === undefined) {
+    return <></>;
+  }
+  const pokemon = data;
+  createdAt = createdAt
+    .toZonedDateTimeISO(Temporal.Now.timeZone())
+    .toPlainDateTime();
+  // console.log(today.since(createdAt, { largestUnit: 'days' }));
+  console.log(pokemon);
 
   return (
     <Suspense fallback={null}>
       <Container>
         <Flex justify="center" align="center" maxW="4xl" pb={48}>
           <Box textAlign={'center'}>
-            <Heading py={4}>Pokemon</Heading>
-
             {status === 'loading' ? (
               <PokeCardEmpty />
             ) : status === 'error' ? (
@@ -44,25 +67,51 @@ const ProfilePage: NextPage = () => {
                 <Box>Error: {error?.message}</Box>
               </>
             ) : (
-              <>
-                <PokeCard
-                  id={data?.pokemon.id ?? 1}
-                  name={data?.pokemon.name ?? ''}
-                  image={data?.pokemon.image ?? ''}
-                />
-                <Grid
-                  templateColumns={{
-                    base: 'repeat(1, 1fr)',
-                    md: 'repeat(2, 1fr)',
-                    lg: 'repeat(3, 1fr)',
-                  }}
-                  gap={8}
-                >
-                  {data?.offers.map((offer) => {
-                    return <PokeListing key={offer.id} pokemon={offer} />;
-                  })}
-                </Grid>
-              </>
+              <Flex
+                gap={4}
+                w="100%"
+                direction={{
+                  base: 'column',
+                  md: 'row',
+                }}
+              >
+                <Flex direction="column" justify="start" align="start">
+                  <Card>
+                    <Image
+                      alt={pokemon.pokemon.name ?? ''}
+                      src={pokemon.pokemon.image ?? ''}
+                    />
+                  </Card>
+                  <Heading size="lg">
+                    {data?.pokemon.name ?? ''} details
+                  </Heading>
+                  <Flex direction="column" align="start" justify="start">
+                    <Link href={`/profile/${pokemon.user.id}`}>
+                      Trainer:{' '}
+                      {`${pokemon.user.name}#${pokemon.user.discriminator}`}
+                    </Link>
+                    <Text>Shiny: {pokemon.shiny ? 'yes' : 'no'}</Text>
+                    <Text>Nature: {pokemon.nature}</Text>
+                    <Text>Region: {pokemon.region}</Text>
+                    <Text>Lv: {pokemon.level}</Text>
+                    <PokeStatChart pokemon={pokemon} />
+                  </Flex>
+                </Flex>
+                <Flex direction="column">
+                  <Heading size="lg">Desired Trades</Heading>
+                  <Flex direction="column">
+                    {data?.offers.map((offer) => {
+                      return (
+                        <PokeListingOffer
+                          key={offer.id}
+                          pokemon={offer}
+                          isOwner={session?.user?.id === data.user.id}
+                        />
+                      );
+                    })}
+                  </Flex>
+                </Flex>
+              </Flex>
             )}
           </Box>
         </Flex>
@@ -71,4 +120,4 @@ const ProfilePage: NextPage = () => {
   );
 };
 
-export default ProfilePage;
+export default ListingPage;

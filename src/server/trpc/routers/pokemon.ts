@@ -3,6 +3,7 @@ import { createListingSchema } from 'schemas';
 import { prisma } from 'server/db/client';
 import { t } from 'server/trpc/trpc';
 import { z } from 'zod';
+import sendMessage from '../discord';
 
 const Pokemon = z.object({
   id: z.number(),
@@ -183,12 +184,11 @@ export const pokemonRouter = t.router({
     .use(authMiddleware)
     .input(createListingSchema)
     .mutation(async ({ input }) => {
-      console.log(input);
       await prisma.pokemonListing.create({
         data: {
           userId: input.userId,
           pokemonId: input.pokemon.id,
-          health: input.health?.value,
+          health: input.health?.value ?? 'unspecified',
           attack: input.attack?.value,
           defense: input.defense?.value,
           speed: input.speed?.value,
@@ -200,6 +200,8 @@ export const pokemonRouter = t.router({
           teraType: input.teraType?.value,
           region: input.region?.value,
           shiny: input.shiny,
+          touch: input.touch,
+          free: input.free,
           offers: {
             create: input.offers.map((offer) => ({
               pokemonId: offer.pokemon.id,
@@ -209,15 +211,122 @@ export const pokemonRouter = t.router({
               speed: offer.speed?.value,
               specialAttack: offer.specialAttack?.value,
               specialDefense: offer.specialDefense?.value,
-              level: offer.level,
+              minLevel: offer.levels?.[0],
+              maxLevel: offer.levels?.[1],
               nature: offer.nature?.value,
               ability: offer.ability,
               teraType: offer.teraType?.value,
               region: offer.region?.value,
               shiny: offer.shiny,
+              touch: input.touch,
             })),
           },
         },
       });
+    }),
+  makeOffer: t.procedure
+    .use(authMiddleware)
+    .input(z.string())
+    .mutation(async ({ input, ctx }) => {
+      if (!ctx.session?.user?.id) {
+        throw new TRPCError({ code: 'UNAUTHORIZED' });
+      }
+      await prisma.userOffer.create({
+        data: {
+          user: {
+            connect: {
+              id: ctx.session.user.id,
+            },
+          },
+          pokemonOffer: {
+            connect: {
+              id: input,
+            },
+          },
+        },
+      });
+    }),
+  getOffers: t.procedure.use(authMiddleware).query(async ({ ctx }) => {
+    if (!ctx.session?.user?.id) {
+      throw new TRPCError({ code: 'UNAUTHORIZED' });
+    }
+    const data = await prisma.pokemonOffer.findMany({
+      where: {
+        listing: {
+          userId: {
+            equals: ctx.session.user.id,
+          },
+        },
+      },
+      include: {
+        listing: {
+          include: {
+            pokemon: true,
+            user: {
+              select: {
+                id: true,
+                name: true,
+                discriminator: true,
+                accounts: {
+                  select: {
+                    providerAccountId: true,
+                  },
+                },
+              },
+            },
+          },
+        },
+        pokemon: true,
+        userOffer: {
+          select: {
+            id: true,
+            accepted: true,
+            createdAt: true,
+            pokemonOffer: true,
+            user: {
+              select: {
+                id: true,
+                name: true,
+                discriminator: true,
+                accounts: {
+                  select: {
+                    providerAccountId: true,
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    });
+
+    return data;
+  }),
+  acceptOffer: t.procedure
+    .use(authMiddleware)
+    .input(
+      z.object({
+        userOfferId: z.string(),
+        poke1: z.string(),
+        poke2: z.string(),
+        user1: z.string(),
+        user2: z.string(),
+      }),
+    )
+    .mutation(async ({ input, ctx }) => {
+      if (!ctx.session?.user?.id) {
+        throw new TRPCError({ code: 'UNAUTHORIZED' });
+      }
+      const { userOfferId, poke1, poke2, user1, user2 } = input;
+
+      const userOffer = await prisma.userOffer.update({
+        where: {
+          id: userOfferId,
+        },
+        data: {
+          accepted: true,
+        },
+      });
+      sendMessage(userOffer.id, poke1, poke2, user1, user2);
     }),
 });

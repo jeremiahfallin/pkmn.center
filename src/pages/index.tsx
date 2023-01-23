@@ -1,8 +1,6 @@
 import { Box, Flex, Grid, Heading, Spinner } from '@chakra-ui/react';
 import Container from 'components/Container';
-import PokeCard from 'components/PokeCard';
 import PokeListing from 'components/PokeListing';
-import TradingFormCard from 'components/TradingFormCard';
 import type { NextPage } from 'next';
 import React, { Suspense } from 'react';
 import { trpc } from 'utils/trpc';
@@ -31,7 +29,6 @@ const HomePage: NextPage = () => {
       <Container>
         <Flex justify="center" align="center" maxW="4xl" pb={48}>
           <Box textAlign={'center'}>
-            <Heading py={4}>Pokemon</Heading>
             {status === 'loading' ? (
               <PokeCardEmpty />
             ) : status === 'error' ? (
@@ -40,6 +37,7 @@ const HomePage: NextPage = () => {
               </>
             ) : (
               <>
+                <Heading py={2}>Recent Postings</Heading>
                 <Grid
                   templateColumns={{
                     base: 'repeat(1, 1fr)',

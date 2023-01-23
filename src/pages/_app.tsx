@@ -8,21 +8,24 @@ export const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
   },
-  global: {
-    html: {
-      height: '100%',
-      minHeight: '100%',
-    },
-    body: {
-      scrollBehavior: 'smooth',
-      height: '100%',
-      minHeight: '100%',
-    },
-    '#__next': {
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-      minHeight: '100%',
+  styles: {
+    global: {
+      html: {
+        height: '100%',
+        minHeight: '100%',
+        scrollbarGutter: 'stable',
+      },
+      body: {
+        scrollBehavior: 'smooth',
+        height: '100%',
+        minHeight: '100%',
+      },
+      '#__next': {
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        minHeight: '100%',
+      },
     },
   },
   colors: {

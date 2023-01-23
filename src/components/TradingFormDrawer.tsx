@@ -18,9 +18,12 @@ import {
   NumberInput,
   NumberInputField,
   NumberInputStepper,
+  RangeSlider,
+  RangeSliderTrack,
+  RangeSliderFilledTrack,
+  RangeSliderThumb,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { useState } from 'react';
 import { Controller } from 'react-hook-form';
 
 import ControlledSelect from './ControlledSelect';
@@ -50,6 +53,84 @@ export default function TradingFormDrawer({
         </DrawerHeader>
 
         <DrawerBody>
+          <Box flexGrow={1} flexBasis={'160px'}>
+            {!name && (
+              <>
+                <FormLabel>Level</FormLabel>
+                <Controller
+                  name={`level`}
+                  control={methods.control}
+                  rules={{
+                    required: {
+                      value: true,
+                      message: 'Level is required',
+                    },
+                  }}
+                  render={({ field: { ref, onChange, ...restField } }) => (
+                    <NumberInput
+                      {...restField}
+                      min={1}
+                      max={100}
+                      onChange={(e) => onChange(parseInt(e))}
+                    >
+                      <NumberInputField ref={ref} name={'level'} />
+                      <NumberInputStepper>
+                        <NumberIncrementStepper />
+                        <NumberDecrementStepper />
+                      </NumberInputStepper>
+                    </NumberInput>
+                  )}
+                />
+              </>
+            )}
+            {name && (
+              <>
+                <FormLabel>Level Range</FormLabel>
+                <Controller
+                  name={`${name}.levels`}
+                  control={methods.control}
+                  rules={{
+                    required: {
+                      value: true,
+                      message: 'Level range is required',
+                    },
+                  }}
+                  render={({ field: { ref, onChange, ...restField } }) => (
+                    <RangeSlider
+                      aria-label={['min', 'max']}
+                      min={1}
+                      max={100}
+                      ref={ref}
+                      name="levels"
+                      onChangeEnd={(e) => onChange(e)}
+                    >
+                      <RangeSliderTrack>
+                        <RangeSliderFilledTrack />
+                      </RangeSliderTrack>
+                      <RangeSliderThumb index={0} />
+                      <RangeSliderThumb index={1} />
+                    </RangeSlider>
+                  )}
+                />
+                <FormHelperText>
+                  {`min: ${methods.watch(
+                    name + 'levels[0]',
+                  )}, max: ${methods.watch(name + 'levels[1]')}`}
+                </FormHelperText>
+              </>
+            )}
+          </Box>
+          <Box flexGrow={1} flexBasis={'160px'} py={2}>
+            <Controller
+              name={`${name}.shiny`}
+              control={methods.control}
+              render={({ field: { ref, ...restField } }) => (
+                <Checkbox {...restField} textTransform="capitalize">
+                  Shiny
+                </Checkbox>
+              )}
+            />
+          </Box>
           <Box pb={4}>
             <Flex gap={2} wrap="wrap" align="flex-end">
               {[
@@ -66,6 +147,7 @@ export default function TradingFormDrawer({
                       name={`${name}.${stat.value}`}
                       label={stat.label}
                       options={[
+                        { value: 'unspecified', label: 'Unspecified' },
                         { value: 'noGood', label: 'No Good' },
                         { value: 'decent', label: 'Decent' },
                         {
@@ -88,45 +170,15 @@ export default function TradingFormDrawer({
                 );
               })}
             </Flex>
-            <FormHelperText>
-              What IVs are you looking for? (leave &quot;No Good&quot; if no
-              preference)
-            </FormHelperText>
+            <FormHelperText>What are your IV requirements?</FormHelperText>
           </Box>
           <Flex gap={2} wrap="wrap" align="flex-end">
-            <Box flexGrow={1} flexBasis={'160px'}>
-              <FormLabel>Minimum level</FormLabel>
-              <Controller
-                name={`${name}level`}
-                control={methods.control}
-                rules={{
-                  required: {
-                    value: true,
-                    message: 'Level is required',
-                  },
-                }}
-                render={({ field: { ref, onChange, ...restField } }) => (
-                  <NumberInput
-                    {...restField}
-                    min={1}
-                    max={100}
-                    onChange={(e) => onChange(parseInt(e))}
-                  >
-                    <NumberInputField ref={ref} name={'level'} />
-                    <NumberInputStepper>
-                      <NumberIncrementStepper />
-                      <NumberDecrementStepper />
-                    </NumberInputStepper>
-                  </NumberInput>
-                )}
-              />
-            </Box>
             <Box flexGrow={1} flexBasis={'160px'}>
               <ControlledSelect
                 name={`${name}.nature`}
                 label={'Nature'}
                 options={[
-                  { value: 'any', label: 'Any' },
+                  { value: 'unspecified', label: 'Unspecified' },
                   { value: 'adamant', label: 'Adamant' },
                   { value: 'bashful', label: 'Bashful' },
                   { value: 'bold', label: 'Bold' },
@@ -161,7 +213,7 @@ export default function TradingFormDrawer({
                 name={`${name}.teraType`}
                 label={'Tera Type'}
                 options={[
-                  { value: 'any', label: 'Any' },
+                  { value: 'unspecified', label: 'Unspecified' },
                   { value: 'bug', label: 'Bug' },
                   { value: 'dark', label: 'Dark' },
                   { value: 'dragon', label: 'Dragon' },
@@ -189,7 +241,7 @@ export default function TradingFormDrawer({
                 name={`${name}.region`}
                 label={'Region'}
                 options={[
-                  { value: 'any', label: 'Any' },
+                  { value: 'unspecified', label: 'Unspecified' },
                   { value: 'CHS', label: 'CHS' },
                   { value: 'CHT', label: 'CHT' },
                   { value: 'ENG', label: 'ENG' },
@@ -205,26 +257,40 @@ export default function TradingFormDrawer({
               />
             </Box>
           </Flex>
-          <Flex gap={2} wrap="wrap" align="flex-end" pt={4}>
-            {['shiny', 'touch', 'free'].map((name) => (
-              <Box flexGrow={1} flexBasis={'160px'} key={name}>
+          <Box pt={4}>
+            <FormLabel>Pricing</FormLabel>
+            <Flex gap={2} wrap="wrap" align="flex-end">
+              <Box flexGrow={1} flexBasis={'160px'}>
                 <Controller
-                  name={name}
+                  name={'touch'}
                   control={methods.control}
                   render={({ field: { ref, ...restField } }) => (
                     <Checkbox {...restField} textTransform="capitalize">
-                      {name}
+                      Touch
                     </Checkbox>
                   )}
                 />
               </Box>
-            ))}
-          </Flex>
+              {!name && (
+                <Box flexGrow={1} flexBasis={'160px'}>
+                  <Controller
+                    name={'free'}
+                    control={methods.control}
+                    render={({ field: { ref, ...restField } }) => (
+                      <Checkbox {...restField} textTransform="capitalize">
+                        Free
+                      </Checkbox>
+                    )}
+                  />
+                </Box>
+              )}
+            </Flex>
+          </Box>
         </DrawerBody>
 
         <DrawerFooter>
           <Button colorScheme="blue" onClick={onClose}>
-            Save
+            Close
           </Button>
         </DrawerFooter>
       </DrawerContent>

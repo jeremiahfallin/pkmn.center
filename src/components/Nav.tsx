@@ -64,9 +64,11 @@ const Nav = () => {
                   <Link href="/">
                     <MenuItem icon={<AtSignIcon />}>Home</MenuItem>
                   </Link>
-                  <Link href="/create">
-                    <MenuItem icon={<RepeatIcon />}>Trade</MenuItem>
-                  </Link>
+                  {session && (
+                    <Link href="/create">
+                      <MenuItem icon={<RepeatIcon />}>Trade</MenuItem>
+                    </Link>
+                  )}
                   <MenuItem icon={<ColorModeIcon />} onClick={toggleColorMode}>
                     {colorModeText} Mode
                   </MenuItem>

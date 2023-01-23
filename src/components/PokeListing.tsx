@@ -1,85 +1,82 @@
 import {
+  Box,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
   Divider,
-  Flex,
+  Grid,
   Heading,
-  Stack,
-  Text,
+  HStack,
+  LinkBox,
+  LinkOverlay,
+  Link,
+  VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import Link from 'next/link';
+import PokeDetails from './PokeDetails';
+import PokeStatChart from './PokeStatChart';
 
 export default function PokeListing({ pokemon }: any): JSX.Element {
   return (
-    <>
-      <Card
-        flexGrow="1"
-        flexBasis="160px"
-        direction={{ base: 'column', sm: 'row' }}
-      >
-        <Flex align={'center'} justify={'center'} direction="column">
-          <Image
-            src={pokemon.pokemon.image}
-            alt={pokemon.pokemon.name}
-            width={150}
-            height={150}
-          />
-        </Flex>
-        <Stack>
-          <CardHeader py={2}>
-            <Heading size="sm" fontWeight={800}>
-              {pokemon.pokemon.name}
-            </Heading>
-
-            {pokemon.user && (
-              <Heading size="sm">
-                <Link href={`/profile/${pokemon.user.id}`}>
-                  {`${pokemon.user.name}#${pokemon.user.discriminator}`}
-                </Link>
-              </Heading>
-            )}
-          </CardHeader>
-          <Divider />
-          <CardBody>
-            <Text>Health: {pokemon.health?.label ?? pokemon.health}</Text>
-            <Text>Attack: {pokemon.attack?.label ?? pokemon.attack}</Text>
-            <Text>Defense: {pokemon.defense?.label ?? pokemon.defense}</Text>
-            <Text>
-              Special Attack:{' '}
-              {pokemon.specialAttack?.label ?? pokemon.specialAttack}
-            </Text>
-            <Text>
-              Special Defense:{' '}
-              {pokemon.specialDefense?.label ?? pokemon.specialDefense}
-            </Text>
-            <Text>Speed: {pokemon.speed?.label ?? pokemon.speed}</Text>
-            <Text>Level: {pokemon.level}</Text>
-            <Text>Nature: {pokemon.nature?.label ?? pokemon.nature}</Text>
-            <Text>
-              Tera Type: {pokemon.teraType?.label ?? pokemon.teraType}
-            </Text>
-            <Text>Shiny: {pokemon.shiny ? 'Yes' : 'No'}</Text>
-            <Text>Region: {pokemon.region?.label ?? pokemon.region}</Text>
-            <Text>Touch: {pokemon.touch ? 'Yes' : 'No'}</Text>
-          </CardBody>
-
-          <Divider />
-          <CardFooter py={2}>
-            {pokemon.offers?.map((offer: any) => (
+    <LinkBox as="article">
+      <Card flexGrow="1" flexBasis="160px">
+        <CardBody p={2}>
+          <Grid templateColumns={'repeat(3, 1fr)'}>
+            <VStack justify="flex-end">
+              <LinkOverlay href={`/listing/${pokemon.id}`}>
+                <PokeDetails pokemon={pokemon} />
+              </LinkOverlay>
+            </VStack>
+            <Box>
+              <Link href={`/profile/${pokemon.user.id}`}>
+                <Heading as="h3" size="sm" pb={0}>
+                  {pokemon.user.name}#{pokemon.user.discriminator}
+                </Heading>
+              </Link>
               <Image
-                key={offer.pokemon.id}
-                src={offer.pokemon.image}
-                alt={offer.pokemon.name}
-                width={75}
-                height={75}
+                src={pokemon.pokemon.image}
+                alt={pokemon.pokemon.name}
+                width={120}
+                height={120}
+                priority
               />
-            ))}
-          </CardFooter>
-        </Stack>
+            </Box>
+            <VStack justify="flex-end">
+              <Box fontSize="xs" h="100%" w="100%">
+                <PokeStatChart pokemon={pokemon} />
+              </Box>
+            </VStack>
+          </Grid>
+        </CardBody>
+        {pokemon.offers.length > 0 && (
+          <>
+            <Divider />
+            <CardFooter p={2} pt={0} overflowX="auto">
+              <VStack>
+                <Heading as="h3" size="sm" pb={0}>
+                  Desired Pokemon
+                </Heading>
+                <HStack>
+                  {pokemon.offers?.length && (
+                    <>
+                      {pokemon.offers?.map((offer: any) => (
+                        <Image
+                          key={offer.pokemon.id}
+                          src={offer.pokemon.image}
+                          alt={offer.pokemon.name}
+                          width={75}
+                          height={75}
+                        />
+                      ))}
+                    </>
+                  )}
+                </HStack>
+              </VStack>
+            </CardFooter>
+          </>
+        )}
       </Card>
-    </>
+    </LinkBox>
   );
 }

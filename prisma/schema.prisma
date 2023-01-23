@@ -52,8 +52,8 @@ model User {
   accounts        Account[]
   sessions        Session[]
   pokemonListing  PokemonListing[]
-  pokemonOffer    PokemonOffer[]
   pokemonWishlist PokemonWishlist[]
+  UserOffer       UserOffer[]
 }
 
 model VerificationToken {
@@ -131,18 +131,18 @@ model PokemonListing {
 }
 
 model PokemonOffer {
-  id             String           @id @default(cuid())
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @updatedAt
-  userId         String?
+  id             String          @id @default(cuid())
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
   pokemonId      Int
-  health         IndividualValue?
-  attack         IndividualValue?
-  specialAttack  IndividualValue?
-  defense        IndividualValue?
-  specialDefense IndividualValue?
-  speed          IndividualValue?
-  level          Int?
+  health         IndividualValue
+  attack         IndividualValue
+  specialAttack  IndividualValue
+  defense        IndividualValue
+  specialDefense IndividualValue
+  speed          IndividualValue
+  minLevel       Int?
+  maxLevel       Int?
   nature         Nature?
   ability        String?
   teraType       TeraType?
@@ -150,13 +150,26 @@ model PokemonOffer {
   region         Region?
   touch          Boolean?
   listingId      String
-  listing        PokemonListing   @relation(fields: [listingId], references: [id], onDelete: Cascade)
-  user           User?            @relation(fields: [userId], references: [id], onDelete: Cascade)
-  pokemon        Pokemon          @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+  listing        PokemonListing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  pokemon        Pokemon         @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+  userOffer      UserOffer[]
 
   @@index([listingId], name: "listingId")
-  @@index([userId], name: "userId")
   @@index([pokemonId], name: "pokemonId")
+}
+
+model UserOffer {
+  id             String       @id @default(cuid())
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  accepted       Boolean      @default(false)
+  pokemonOfferId String
+  pokemonOffer   PokemonOffer @relation(fields: [pokemonOfferId], references: [id])
+  userId         String
+  user           User         @relation(fields: [userId], references: [id])
+
+  @@index([userId], name: "userId")
+  @@index([pokemonOfferId], name: "pokemonOfferId")
 }
 
 enum Type {
@@ -181,7 +194,7 @@ enum Type {
 }
 
 enum TeraType {
-  any
+  unspecified
   normal
   fire
   water
@@ -203,7 +216,7 @@ enum TeraType {
 }
 
 enum Nature {
-  any
+  unspecified
   hardy
   lonely
   adamant
@@ -232,6 +245,7 @@ enum Nature {
 }
 
 enum IndividualValue {
+  unspecified
   best
   fantastic
   veryGood
@@ -241,7 +255,7 @@ enum IndividualValue {
 }
 
 enum Region {
-  any
+  unspecified
   ENG
   JPN
   SPA

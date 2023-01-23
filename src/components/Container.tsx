@@ -14,8 +14,8 @@ export default function Container(props: ContainerProps) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'PokeRate',
-    description: 'A simple rating system for Pokemon.',
+    title: 'Pokemon Trading',
+    description: 'A simple trading app for Pokemon.',
     type: 'website',
     ...customMeta,
   };
@@ -41,7 +41,7 @@ export default function Container(props: ContainerProps) {
           id="skip"
           dir="column"
           justify="center"
-          px={8}
+          px={[2, 4, 4]}
           minW="100%"
           w="100%"
         >

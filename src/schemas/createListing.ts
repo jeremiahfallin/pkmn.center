@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 const individualValueSelectProperties = z.object({
   label: z.enum([
+    'Unspecified',
     'No Good',
     'Decent',
     'Pretty Good',
@@ -10,6 +11,7 @@ const individualValueSelectProperties = z.object({
     'Best',
   ]),
   value: z.enum([
+    'unspecified',
     'noGood',
     'decent',
     'prettyGood',
@@ -21,7 +23,7 @@ const individualValueSelectProperties = z.object({
 
 const natureSelectProperties = z.object({
   label: z.enum([
-    'Any',
+    'Unspecified',
     'Hardy',
     'Lonely',
     'Brave',
@@ -49,7 +51,7 @@ const natureSelectProperties = z.object({
     'Quirky',
   ]),
   value: z.enum([
-    'any',
+    'unspecified',
     'hardy',
     'lonely',
     'brave',
@@ -80,7 +82,7 @@ const natureSelectProperties = z.object({
 
 const teraTypeSelectProperties = z.object({
   label: z.enum([
-    'Any',
+    'Unspecified',
     'Normal',
     'Fire',
     'Water',
@@ -101,7 +103,7 @@ const teraTypeSelectProperties = z.object({
     'Fairy',
   ]),
   value: z.enum([
-    'any',
+    'unspecified',
     'normal',
     'fire',
     'water',
@@ -125,7 +127,7 @@ const teraTypeSelectProperties = z.object({
 
 const regionSelectProperties = z.object({
   label: z.enum([
-    'Any',
+    'Unspecified',
     'ENG',
     'JPN',
     'SPA',
@@ -138,7 +140,7 @@ const regionSelectProperties = z.object({
     'KOR',
   ]),
   value: z.enum([
-    'any',
+    'unspecified',
     'ENG',
     'JPN',
     'SPA',
@@ -197,7 +199,7 @@ export const createListingSchema = z.object({
       speed: individualValueSelectProperties.optional(),
       specialAttack: individualValueSelectProperties.optional(),
       specialDefense: individualValueSelectProperties.optional(),
-      level: z.number().optional(),
+      levels: z.number().array().length(2).optional(),
       nature: natureSelectProperties.optional(),
       ability: z.string().optional(),
       teraType: teraTypeSelectProperties.optional(),

@@ -20,7 +20,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import React, { Suspense, useState } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { createListingSchema } from 'schemas';
 import { trpc } from 'utils/trpc';
 
@@ -37,18 +37,18 @@ const HomePage: NextPage = () => {
     defaultValues: {
       userId: '',
       pokemon: null,
-      health: { value: 'noGood', label: 'No Good' },
-      attack: { value: 'noGood', label: 'No Good' },
-      defense: { value: 'noGood', label: 'No Good' },
-      specialAttack: { value: 'noGood', label: 'No Good' },
-      specialDefense: { value: 'noGood', label: 'No Good' },
-      speed: { value: 'noGood', label: 'No Good' },
+      health: { value: 'unspecified', label: 'Unspecified' },
+      attack: { value: 'unspecified', label: 'Unspecified' },
+      defense: { value: 'unspecified', label: 'Unspecified' },
+      specialAttack: { value: 'unspecified', label: 'Unspecified' },
+      specialDefense: { value: 'unspecified', label: 'Unspecified' },
+      speed: { value: 'unspecified', label: 'Unspecified' },
       level: 1,
-      nature: { value: 'any', label: 'Any' },
-      teraType: { value: 'any', label: 'Any' },
+      nature: { value: 'unspecified', label: 'Unspecified' },
+      teraType: { value: 'unspecified', label: 'Unspecified' },
       ability: '',
       shiny: false,
-      region: { value: 'any', label: 'Any' },
+      region: { value: 'unspecified', label: 'Unspecified' },
       free: false,
       touch: false,
       listingType: 'sell',
@@ -122,9 +122,8 @@ const HomePage: NextPage = () => {
             ) : (
               <form
                 onSubmit={methods.handleSubmit(async (data) => {
-                  console.log(data);
-                  const res = await createListing.mutateAsync(data as any);
-                  console.log(res);
+                  await createListing.mutateAsync(data as any);
+
                   methods.reset();
                 })}
               >

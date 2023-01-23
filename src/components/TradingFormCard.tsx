@@ -22,7 +22,6 @@ export default function TradingFormCard({
   index,
 }: any): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log(pokemon);
 
   return (
     <>
