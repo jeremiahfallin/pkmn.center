@@ -18,6 +18,7 @@ import { useSession } from 'next-auth/react';
 import React, { Suspense } from 'react';
 import { trpc } from 'utils/trpc';
 
+// @ts-ignore
 Date.prototype.toTemporalInstant = toTemporalInstant;
 
 function PokeCardEmpty() {
@@ -43,7 +44,9 @@ const ListingPage: NextPage = () => {
   const { data: session } = useSession();
 
   const today = Temporal.Now.plainDateTimeISO();
+  // @ts-ignore
   let createdAt = data?.createdAt.toTemporalInstant();
+  // @ts-ignore
   if (data?.createdAt.toTemporalInstant() === undefined) {
     return <></>;
   }
@@ -93,6 +96,7 @@ const ListingPage: NextPage = () => {
                     <Text>Nature: {pokemon.nature}</Text>
                     <Text>Region: {pokemon.region}</Text>
                     <Text>Lv: {pokemon.level}</Text>
+                    {/*@ts-ignore*/}
                     <PokeStatChart pokemon={pokemon} />
                   </Flex>
                 </Flex>
