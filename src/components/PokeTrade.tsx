@@ -5,9 +5,7 @@ import {
   Card,
   CardBody,
   CardFooter,
-  CardHeader,
   Divider,
-  Flex,
   Grid,
   GridItem,
   Tag,
@@ -17,13 +15,9 @@ import Image from 'next/image';
 import { trpc } from 'utils/trpc';
 
 import PokeDetails from './PokeDetails';
-import PokeStatChart, { Offer, UserOffer } from './PokeStatChart';
+import PokeStatChart from './PokeStatChart';
 
-export default function PokeTrade({
-  pokemon,
-}: {
-  pokemon: Offer;
-}): JSX.Element {
+export default function PokeTrade({ pokemon }: any): JSX.Element {
   const mutation = trpc.pokemonRouter.acceptOffer.useMutation({
     onSuccess: () => {
       console.log('success');
@@ -31,7 +25,7 @@ export default function PokeTrade({
   });
   return (
     <>
-      {pokemon.userOffer.map((userOffer: UserOffer) => {
+      {pokemon.userOffer.map((userOffer: any) => {
         return (
           <Card direction="column" key={userOffer.id}>
             <CardBody p={2}>
