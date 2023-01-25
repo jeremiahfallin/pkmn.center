@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import type { PokemonListing } from '@prisma/client';
 import {
   PolarAngleAxis,
   PolarGrid,
@@ -8,7 +9,6 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from 'recharts';
-import type { PokemonListing } from '@prisma/client';
 
 const numberToValue = [
   'Unspecified',
