@@ -206,12 +206,12 @@ export const pokemonRouter = t.router({
           offers: {
             create: input.offers.map((offer) => ({
               pokemonId: offer.pokemon.id,
-              health: offer.health?.value,
-              attack: offer.attack?.value,
-              defense: offer.defense?.value,
-              speed: offer.speed?.value,
-              specialAttack: offer.specialAttack?.value,
-              specialDefense: offer.specialDefense?.value,
+              health: offer.health!.value,
+              attack: offer.attack!.value,
+              defense: offer.defense!.value,
+              speed: offer.speed!.value,
+              specialAttack: offer.specialAttack!.value,
+              specialDefense: offer.specialDefense!.value,
               minLevel: offer.levels?.[0],
               maxLevel: offer.levels?.[1],
               nature: offer.nature?.value,
@@ -220,6 +220,11 @@ export const pokemonRouter = t.router({
               region: offer.region?.value,
               shiny: offer.shiny,
               touch: input.touch,
+              pokemon: {
+                connect: {
+                  id: offer.pokemon.id,
+                },
+              },
             })),
           },
         },
