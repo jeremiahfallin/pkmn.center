@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import Container from 'components/Container';
 import PokeListingOffer from 'components/PokeListingOffer';
-import PokeStatChart, { Listing } from 'components/PokeStatChart';
+import PokeStatChart from 'components/PokeStatChart';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';

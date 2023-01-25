@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from 'recharts';
+import type { PokemonListing } from '@prisma/client';
 
 const numberToValue = [
   'Unspecified',
@@ -29,7 +30,7 @@ const valueToNumber = {
   best: 6,
 };
 
-function process(data: Offer | Listing) {
+function process(data: PokemonListing) {
   return [
     { stat: 'HP', value: valueToNumber[data.health] },
     {
@@ -49,92 +50,6 @@ function process(data: Offer | Listing) {
       value: valueToNumber[data.specialAttack],
     },
   ];
-}
-
-export interface Offer {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  pokemonId: number;
-  health: StatValue;
-  attack: StatValue;
-  specialAttack: StatValue;
-  defense: StatValue;
-  specialDefense: StatValue;
-  speed: StatValue;
-  minLevel: number;
-  maxLevel: number;
-  nature: string;
-  ability: string;
-  teraType: string;
-  shiny: boolean;
-  region: string;
-  touch: boolean;
-  listingId: string;
-  listing: Listing;
-  pokemon: Pokemon;
-  userOffer: UserOffer[];
-}
-export interface Listing {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  userId: string;
-  pokemonId: number;
-  health: StatValue;
-  attack: StatValue;
-  specialAttack: StatValue;
-  defense: StatValue;
-  specialDefense: StatValue;
-  speed: StatValue;
-  level: number;
-  nature: string;
-  ability: string;
-  teraType: string;
-  shiny: boolean;
-  region: string;
-  free: boolean;
-  touch: boolean;
-  acceptOffers?: null;
-  pokemon: Pokemon;
-  user: User;
-}
-export interface Pokemon {
-  id: number;
-  name: string;
-  image: string;
-  typeOne: string;
-  typeTwo: string;
-}
-export interface UserOffer {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  userId: string;
-  offerId: string;
-  user: User;
-  offer: Offer;
-  accepted: boolean;
-}
-export interface User {
-  id: string;
-  name: string;
-  discriminator: string;
-  userOffer: UserOffer[];
-  accounts: Account[];
-}
-export interface Account {
-  id: string;
-  providerAccountId: string;
-}
-enum StatValue {
-  unspecified = 'unspecified',
-  noGood = 'noGood',
-  decent = 'decent',
-  prettyGood = 'prettyGood',
-  veryGood = 'veryGood',
-  fantastic = 'fantastic',
-  best = 'best',
 }
 
 const ValueTooltip = ({ active, payload, label }: any) => {
@@ -157,7 +72,7 @@ const ValueTooltip = ({ active, payload, label }: any) => {
   return null;
 };
 
-export function PokeStatChart({ pokemon }: { pokemon: Offer | Listing }) {
+export function PokeStatChart({ pokemon }: { pokemon: PokemonListing }) {
   const data = process(pokemon);
 
   return (

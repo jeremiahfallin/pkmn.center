@@ -2,7 +2,6 @@ import {
   Avatar,
   Box,
   Flex,
-  Grid,
   Heading,
   HStack,
   SimpleGrid,
