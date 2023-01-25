@@ -102,17 +102,17 @@ model PokemonWishlist {
 }
 
 model PokemonListing {
-  id             String           @id @default(cuid())
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @updatedAt
+  id             String          @id @default(cuid())
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
   userId         String
   pokemonId      Int
-  health         IndividualValue?
-  attack         IndividualValue?
-  specialAttack  IndividualValue?
-  defense        IndividualValue?
-  specialDefense IndividualValue?
-  speed          IndividualValue?
+  health         IndividualValue
+  attack         IndividualValue
+  specialAttack  IndividualValue
+  defense        IndividualValue
+  specialDefense IndividualValue
+  speed          IndividualValue
   level          Int?
   nature         Nature?
   ability        String?
@@ -123,8 +123,8 @@ model PokemonListing {
   touch          Boolean?
   acceptOffers   Boolean?
   offers         PokemonOffer[]
-  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
-  pokemon        Pokemon          @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pokemon        Pokemon         @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
 
   @@index([userId], name: "userId")
   @@index([pokemonId], name: "pokemonId")

@@ -8,18 +8,14 @@ import {
   Spinner,
   Text,
 } from '@chakra-ui/react';
-import { Intl, Temporal, toTemporalInstant } from '@js-temporal/polyfill';
 import Container from 'components/Container';
 import PokeListingOffer from 'components/PokeListingOffer';
-import PokeStatChart from 'components/PokeStatChart';
+import PokeStatChart, { Listing } from 'components/PokeStatChart';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import React, { Suspense } from 'react';
 import { trpc } from 'utils/trpc';
-
-// @ts-ignore
-Date.prototype.toTemporalInstant = toTemporalInstant;
 
 function PokeCardEmpty() {
   return (
@@ -43,19 +39,17 @@ const ListingPage: NextPage = () => {
   );
   const { data: session } = useSession();
 
-  const today = Temporal.Now.plainDateTimeISO();
-  // @ts-ignore
-  let createdAt = data?.createdAt.toTemporalInstant();
-  // @ts-ignore
-  if (data?.createdAt.toTemporalInstant() === undefined) {
-    return <></>;
-  }
   const pokemon = data;
-  createdAt = createdAt
-    .toZonedDateTimeISO(Temporal.Now.timeZone())
-    .toPlainDateTime();
-  // console.log(today.since(createdAt, { largestUnit: 'days' }));
-  console.log(pokemon);
+
+  if (!pokemon) {
+    return (
+      <Container>
+        <Flex justify="center" align="center" maxW="4xl" pb={48}>
+          <Box textAlign={'center'}>No listing found.</Box>
+        </Flex>
+      </Container>
+    );
+  }
 
   return (
     <Suspense fallback={null}>
@@ -80,23 +74,23 @@ const ListingPage: NextPage = () => {
                 <Flex direction="column" justify="start" align="start">
                   <Card>
                     <Image
-                      alt={pokemon.pokemon.name ?? ''}
-                      src={pokemon.pokemon.image ?? ''}
+                      alt={pokemon?.pokemon.name ?? ''}
+                      src={pokemon?.pokemon.image ?? ''}
                     />
                   </Card>
                   <Heading size="lg">
                     {data?.pokemon.name ?? ''} details
                   </Heading>
                   <Flex direction="column" align="start" justify="start">
-                    <Link href={`/profile/${pokemon.user.id}`}>
+                    <Link href={`/profile/${pokemon?.user.id}`}>
                       Trainer:{' '}
-                      {`${pokemon.user.name}#${pokemon.user.discriminator}`}
+                      {`${pokemon?.user.name}#${pokemon?.user.discriminator}`}
                     </Link>
-                    <Text>Shiny: {pokemon.shiny ? 'yes' : 'no'}</Text>
-                    <Text>Nature: {pokemon.nature}</Text>
-                    <Text>Region: {pokemon.region}</Text>
-                    <Text>Lv: {pokemon.level}</Text>
-                    {/*@ts-ignore*/}
+                    <Text>Shiny: {pokemon?.shiny ? 'yes' : 'no'}</Text>
+                    <Text>Nature: {pokemon?.nature}</Text>
+                    <Text>Region: {pokemon?.region}</Text>
+                    <Text>Lv: {pokemon?.level}</Text>
+
                     <PokeStatChart pokemon={pokemon} />
                   </Flex>
                 </Flex>
