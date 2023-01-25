@@ -1,8 +1,11 @@
 import { Box, Flex, Image, Tag } from '@chakra-ui/react';
+import type { PokemonListing, PokemonOffer } from '@prisma/client';
 
-import { Listing, Offer } from './PokeStatChart';
-
-export default function PokeDetails({ pokemon }: { pokemon: Offer | Listing }) {
+export default function PokeDetails({
+  pokemon,
+}: {
+  pokemon: PokemonListing | PokemonOffer;
+}) {
   let level = '';
   if ('level' in pokemon) {
     level = `Lv. ${pokemon.level}`;
