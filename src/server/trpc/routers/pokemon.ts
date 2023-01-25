@@ -205,7 +205,6 @@ export const pokemonRouter = t.router({
           free: input.free,
           offers: {
             create: input.offers.map((offer) => ({
-              pokemonId: offer.pokemon.id,
               health: offer.health!.value,
               attack: offer.attack!.value,
               defense: offer.defense!.value,
