@@ -7,6 +7,7 @@ import {
   Divider,
   Grid,
   Stack,
+  useToast,
   VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
@@ -19,9 +20,17 @@ export default function PokeListingOffer({
   pokemon,
   isOwner,
 }: any): JSX.Element {
+  const toast = useToast();
   const mutation = trpc.pokemonRouter.makeOffer.useMutation({
     onSuccess: () => {
       console.log('success');
+      toast({
+        title: 'Offer sent.',
+        description: "Good luck! We'll let you know if it's accepted",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      });
     },
   });
   return (

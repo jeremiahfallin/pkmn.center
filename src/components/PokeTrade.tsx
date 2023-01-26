@@ -94,6 +94,13 @@ export default function PokeTrade({ pokemon }: any): JSX.Element {
               <Button
                 colorScheme={'blue'}
                 onClick={() => {
+                  console.log({
+                    userOfferId: userOffer.id,
+                    poke1: pokemon.listing.pokemon.name,
+                    poke2: pokemon.pokemon.name,
+                    user1: userOffer.user.accounts[0].providerAccountId,
+                    user2: pokemon.listing.user.accounts[0].providerAccountId,
+                  });
                   mutation.mutateAsync({
                     userOfferId: userOffer.id,
                     poke1: pokemon.listing.pokemon.name,
