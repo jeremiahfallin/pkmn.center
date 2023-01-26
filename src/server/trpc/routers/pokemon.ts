@@ -324,14 +324,14 @@ export const pokemonRouter = t.router({
       }
       const { userOfferId, poke1, poke2, user1, user2 } = input;
 
-      // const userOffer = await prisma.userOffer.update({
-      //   where: {
-      //     id: userOfferId,
-      //   },
-      //   data: {
-      //     accepted: true,
-      //   },
-      // });
-      // sendMessage(userOfferId, poke1, poke2, user1, user2);
+      const userOffer = await prisma.userOffer.update({
+        where: {
+          id: userOfferId,
+        },
+        data: {
+          accepted: true,
+        },
+      });
+      sendMessage(userOfferId, poke1, poke2, user1, user2);
     }),
 });
