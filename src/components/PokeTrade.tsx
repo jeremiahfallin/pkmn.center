@@ -64,7 +64,10 @@ export default function PokeTrade({ pokemon }: any): JSX.Element {
                 <ArrowRightIcon />
               </GridItem>
               <GridItem borderTop={'1px solid'} py={2}>
-                <Tag>relic#8008</Tag>
+                <Tag>
+                  {pokemon.listing.user.name}#
+                  {pokemon.listing.user.discriminator}
+                </Tag>
               </GridItem>
             </Grid>
             <CardBody p={2}>

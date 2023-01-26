@@ -17,8 +17,8 @@ export default function PokeDetails({ pokemon }: { pokemon: any }) {
       borderRadius="md"
     >
       <Flex direction="row" gap={2}>
-        <Tag variant="outline">SPA-EU</Tag>
-        <Tag>Hardy</Tag>
+        <Tag variant="outline">{pokemon.region}</Tag>
+        <Tag>{pokemon.nature}</Tag>
       </Flex>
       <Flex direction="row" gap={2}>
         <Box filter={pokemon.shiny ? '' : 'grayscale(100%)'}>✨</Box>

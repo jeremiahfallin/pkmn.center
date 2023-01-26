@@ -100,6 +100,7 @@ export default function TradingFormDrawer({
                       aria-label={['min', 'max']}
                       min={1}
                       max={100}
+                      defaultValue={[1, 100]}
                       ref={ref}
                       name="levels"
                       onChangeEnd={(e) => onChange(e)}
