@@ -332,6 +332,6 @@ export const pokemonRouter = t.router({
           accepted: true,
         },
       });
-      sendMessage(userOfferId, poke1, poke2, user1, user2);
+      sendMessage(userOffer.id, poke1, poke2, user1, user2);
     }),
 });
