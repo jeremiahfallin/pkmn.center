@@ -236,7 +236,7 @@ export const pokemonRouter = t.router({
       if (!ctx.session?.user?.id) {
         throw new TRPCError({ code: 'UNAUTHORIZED' });
       }
-      await prisma.userOffer.create({
+      await prisma.offerDetail.create({
         data: {
           user: {
             connect: {
@@ -248,6 +248,7 @@ export const pokemonRouter = t.router({
               id: input,
             },
           },
+          status: 'pending',
         },
       });
     }),
@@ -282,10 +283,10 @@ export const pokemonRouter = t.router({
           },
         },
         pokemon: true,
-        userOffer: {
+        offerDetails: {
           select: {
             id: true,
-            accepted: true,
+            status: true,
             createdAt: true,
             pokemonOffer: true,
             user: {
@@ -311,27 +312,154 @@ export const pokemonRouter = t.router({
     .use(authMiddleware)
     .input(
       z.object({
-        userOfferId: z.string(),
-        poke1: z.string(),
-        poke2: z.string(),
-        user1: z.string(),
-        user2: z.string(),
+        offerDetailId: z.string(),
       }),
     )
     .mutation(async ({ input, ctx }) => {
       if (!ctx.session?.user?.id) {
         throw new TRPCError({ code: 'UNAUTHORIZED' });
       }
-      const { userOfferId, poke1, poke2, user1, user2 } = input;
+      const { offerDetailId } = input;
 
-      const userOffer = await prisma.userOffer.update({
+      const offerDetail = await prisma.offerDetail.findUnique({
         where: {
-          id: userOfferId,
+          id: offerDetailId,
         },
-        data: {
-          accepted: true,
+        include: {
+          user: {
+            select: {
+              id: true,
+              name: true,
+            },
+          },
+          pokemonOffer: {
+            include: {
+              pokemon: {
+                select: {
+                  id: true,
+                  name: true,
+                },
+              },
+              listing: {
+                include: {
+                  user: true,
+                  pokemon: {
+                    select: {
+                      id: true,
+                      name: true,
+                    },
+                  },
+                },
+              },
+            },
+          },
         },
       });
-      sendMessage(userOffer.id, poke1, poke2, user1, user2);
+
+      if (!offerDetail) {
+        throw new TRPCError({ code: 'NOT_FOUND' });
+      }
+
+      if (offerDetail.pokemonOffer.listing.userId !== ctx.session.user.id) {
+        throw new TRPCError({ code: 'UNAUTHORIZED' });
+      }
+
+      if (offerDetail.status === 'accepted') {
+        throw new TRPCError({ code: 'CONFLICT' });
+      }
+
+      await prisma.offerDetail.update({
+        where: {
+          id: offerDetailId,
+        },
+        data: {
+          status: 'accepted',
+        },
+      });
+
+      sendMessage(
+        offerDetail.id,
+        offerDetail.pokemonOffer.listing.pokemon.name,
+        offerDetail.pokemonOffer.pokemon.name,
+        offerDetail.pokemonOffer.listing.user.id,
+        offerDetail.user.id,
+      );
+    }),
+  completeTrade: t.procedure
+    .use(authMiddleware)
+    .input(
+      z.object({
+        offerDetailId: z.string(),
+      }),
+    )
+    .mutation(async ({ input, ctx }) => {
+      if (!ctx.session?.user?.id) {
+        throw new TRPCError({ code: 'UNAUTHORIZED' });
+      }
+      const { offerDetailId } = input;
+
+      const offerDetail = await prisma.offerDetail.findUnique({
+        where: {
+          id: offerDetailId,
+        },
+        include: {
+          user: {
+            select: {
+              id: true,
+              name: true,
+            },
+          },
+          pokemonOffer: {
+            include: {
+              pokemon: {
+                select: {
+                  id: true,
+                  name: true,
+                },
+              },
+              listing: {
+                include: {
+                  user: true,
+                  pokemon: {
+                    select: {
+                      id: true,
+                      name: true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      });
+
+      if (!offerDetail) {
+        throw new TRPCError({ code: 'NOT_FOUND' });
+      }
+
+      if (offerDetail.pokemonOffer.listing.userId !== ctx.session.user.id) {
+        throw new TRPCError({ code: 'UNAUTHORIZED' });
+      }
+
+      if (offerDetail.status === 'accepted') {
+        throw new TRPCError({ code: 'CONFLICT' });
+      }
+
+      await prisma.offerDetail.update({
+        where: {
+          id: offerDetailId,
+        },
+        data: {
+          status: 'completed',
+        },
+      });
+
+      sendMessage(
+        offerDetail.id,
+        offerDetail.pokemonOffer.listing.pokemon.name,
+        offerDetail.pokemonOffer.pokemon.name,
+        offerDetail.pokemonOffer.listing.user.id,
+        offerDetail.user.id,
+      );
     }),
 });

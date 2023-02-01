@@ -63,14 +63,7 @@ const ListingPage: NextPage = () => {
                 <Box>Error: {error?.message}</Box>
               </>
             ) : (
-              <Flex
-                gap={4}
-                w="100%"
-                direction={{
-                  base: 'column',
-                  md: 'row',
-                }}
-              >
+              <Flex gap={4} w="100%" direction="column">
                 <Flex direction="column" justify="start" align="start">
                   <Card>
                     <Image

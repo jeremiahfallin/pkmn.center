@@ -3,10 +3,22 @@ import type { PokemonListing, PokemonOffer } from '@prisma/client';
 
 export default function PokeDetails({ pokemon }: { pokemon: any }) {
   let level = '';
+  let region = '';
+  let nature = '';
   if ('level' in pokemon) {
     level = `Lv. ${pokemon.level}`;
   } else {
     level = `Lv. ${pokemon.minLevel} - ${pokemon.maxLevel}`;
+  }
+  if (pokemon.region === 'unspecified') {
+    region = 'Any';
+  } else {
+    region = pokemon.region;
+  }
+  if (pokemon.nature === 'unspecified') {
+    nature = 'Any';
+  } else {
+    nature = pokemon.nature;
   }
   return (
     <Flex
@@ -15,10 +27,11 @@ export default function PokeDetails({ pokemon }: { pokemon: any }) {
       p={2}
       gap={1}
       borderRadius="md"
+      w="112px"
     >
       <Flex direction="row" gap={2}>
-        <Tag variant="outline">{pokemon.region}</Tag>
-        <Tag>{pokemon.nature}</Tag>
+        <Tag variant="outline">{region}</Tag>
+        <Tag>{nature}</Tag>
       </Flex>
       <Flex direction="row" gap={2}>
         <Box filter={pokemon.shiny ? '' : 'grayscale(100%)'}>✨</Box>

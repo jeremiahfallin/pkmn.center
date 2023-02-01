@@ -25,9 +25,9 @@ export default function PokeTrade({ pokemon }: any): JSX.Element {
   });
   return (
     <>
-      {pokemon.userOffer.map((userOffer: any) => {
+      {pokemon.offerDetails.map((offerDetail: any) => {
         return (
-          <Card direction="column" key={userOffer.id}>
+          <Card direction="column" key={offerDetail.id}>
             <CardBody p={2}>
               <Grid gridTemplateColumns={'repeat(3, 1fr)'}>
                 <VStack justify="center">
@@ -50,7 +50,7 @@ export default function PokeTrade({ pokemon }: any): JSX.Element {
             <Grid gridTemplateColumns={'repeat(3, 1fr)'}>
               <GridItem borderBottom={'1px solid'} py={2}>
                 <Tag>
-                  {userOffer.user.name}#{userOffer.user.discriminator}
+                  {offerDetail.user.name}#{offerDetail.user.discriminator}
                 </Tag>
               </GridItem>
               <GridItem
@@ -94,19 +94,8 @@ export default function PokeTrade({ pokemon }: any): JSX.Element {
               <Button
                 colorScheme={'blue'}
                 onClick={() => {
-                  console.log({
-                    userOfferId: userOffer.id,
-                    poke1: pokemon.listing.pokemon.name,
-                    poke2: pokemon.pokemon.name,
-                    user1: userOffer.user.accounts[0].providerAccountId,
-                    user2: pokemon.listing.user.accounts[0].providerAccountId,
-                  });
                   mutation.mutateAsync({
-                    userOfferId: userOffer.id,
-                    poke1: pokemon.listing.pokemon.name,
-                    poke2: pokemon.pokemon.name,
-                    user1: userOffer.user.accounts[0].providerAccountId,
-                    user2: pokemon.listing.user.accounts[0].providerAccountId,
+                    offerDetailId: offerDetail.id,
                   });
                 }}
               >

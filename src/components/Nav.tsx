@@ -135,19 +135,33 @@ const Nav = () => {
                 </Link>
               </NextLink>
             )}
-            {session && (
-              <NextLink href="/">
-                <Link
-                  onClick={(e) => {
-                    e.preventDefault();
-                    signOut({
-                      callbackUrl: `${window.location.origin}`,
-                    });
-                  }}
-                >
-                  <Box as="span">Logout</Box>
-                </Link>
-              </NextLink>
+            {session && session?.user?.id && (
+              <>
+                <NextLink href="/profile">
+                  <Link
+                    onClick={(e) => {
+                      e.preventDefault();
+                      router.push({
+                        pathname: `/profile/${session?.user?.id}`,
+                      });
+                    }}
+                  >
+                    <Box as="span">Profile</Box>
+                  </Link>
+                </NextLink>
+                <NextLink href="/">
+                  <Link
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signOut({
+                        callbackUrl: `${window.location.origin}`,
+                      });
+                    }}
+                  >
+                    <Box as="span">Logout</Box>
+                  </Link>
+                </NextLink>
+              </>
             )}
           </Flex>
         </Flex>

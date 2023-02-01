@@ -37,11 +37,11 @@ function PokeCardEmpty() {
 
 const ListingTab = ({ data }: any) => {
   return (
-    <SimpleGrid gap={2} minChildWidth="360px">
+    <VStack gap={2}>
       {data?.pokemonListing.map((listing: any) => (
         <PokeListing key={listing.id} pokemon={listing} />
       ))}
-    </SimpleGrid>
+    </VStack>
   );
 };
 
