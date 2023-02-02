@@ -330,6 +330,11 @@ export const pokemonRouter = t.router({
             select: {
               id: true,
               name: true,
+              accounts: {
+                select: {
+                  providerAccountId: true,
+                },
+              },
             },
           },
           pokemonOffer: {
@@ -342,7 +347,17 @@ export const pokemonRouter = t.router({
               },
               listing: {
                 include: {
-                  user: true,
+                  user: {
+                    select: {
+                      id: true,
+                      name: true,
+                      accounts: {
+                        select: {
+                          providerAccountId: true,
+                        },
+                      },
+                    },
+                  },
                   pokemon: {
                     select: {
                       id: true,
@@ -364,9 +379,9 @@ export const pokemonRouter = t.router({
         throw new TRPCError({ code: 'UNAUTHORIZED' });
       }
 
-      if (offerDetail.status === 'accepted') {
-        throw new TRPCError({ code: 'CONFLICT' });
-      }
+      // if (offerDetail.status === 'accepted') {
+      //   throw new TRPCError({ code: 'CONFLICT' });
+      // }
 
       await prisma.offerDetail.update({
         where: {
@@ -381,8 +396,8 @@ export const pokemonRouter = t.router({
         offerDetail.id,
         offerDetail.pokemonOffer.listing.pokemon.name,
         offerDetail.pokemonOffer.pokemon.name,
-        offerDetail.pokemonOffer.listing.user.id,
-        offerDetail.user.id,
+        offerDetail.pokemonOffer.listing.user.accounts[0].providerAccountId,
+        offerDetail.user.accounts[0].providerAccountId,
       );
     }),
   completeTrade: t.procedure
@@ -454,12 +469,12 @@ export const pokemonRouter = t.router({
         },
       });
 
-      sendMessage(
-        offerDetail.id,
-        offerDetail.pokemonOffer.listing.pokemon.name,
-        offerDetail.pokemonOffer.pokemon.name,
-        offerDetail.pokemonOffer.listing.user.id,
-        offerDetail.user.id,
-      );
+      // sendMessage(
+      //   offerDetail.id,
+      //   offerDetail.pokemonOffer.listing.pokemon.name,
+      //   offerDetail.pokemonOffer.pokemon.name,
+      //   offerDetail.pokemonOffer.listing.user.id,
+      //   offerDetail.user.id,
+      // );
     }),
 });
