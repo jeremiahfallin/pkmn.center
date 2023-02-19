@@ -21,13 +21,13 @@ const numberToValue = [
 ];
 
 const valueToNumber = {
-  unspecified: 0,
-  noGood: 1,
-  decent: 2,
-  prettyGood: 3,
-  veryGood: 4,
-  fantastic: 5,
-  best: 6,
+  unspecified: 1,
+  noGood: 2,
+  decent: 3,
+  prettyGood: 4,
+  veryGood: 5,
+  fantastic: 6,
+  best: 7,
 };
 
 function process(data: PokemonListing) {
@@ -64,7 +64,7 @@ const ValueTooltip = ({ active, payload, label }: any) => {
         bg="gray.700"
       >
         <p className="label">{`${label}: ${
-          numberToValue[payload[0].value]
+          numberToValue[payload[0].value - 1]
         }`}</p>
       </Box>
     );
@@ -76,12 +76,19 @@ export function PokeStatChart({ pokemon }: { pokemon: PokemonListing }) {
   const data = process(pokemon);
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <RadarChart cx="50%" cy="50%" outerRadius="60%" data={data}>
+    <ResponsiveContainer
+      width="100%"
+      height="100%"
+      minWidth="100%"
+      minHeight="100%"
+      debounce={1}
+      aspect={1}
+    >
+      <RadarChart cx="50%" cy="50%" outerRadius="50%" data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="stat" />
         <Tooltip content={<ValueTooltip />} />
-        <PolarRadiusAxis domain={[0, 6]} tick={false} axisLine={false} />
+        <PolarRadiusAxis domain={[0, 7]} tick={false} axisLine={false} />
         <Radar
           name="Pokemon"
           dataKey="value"

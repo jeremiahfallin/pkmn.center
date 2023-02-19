@@ -308,11 +308,12 @@ export const pokemonRouter = t.router({
 
     return data;
   }),
-  acceptOffer: t.procedure
+  updateOffer: t.procedure
     .use(authMiddleware)
     .input(
       z.object({
         offerDetailId: z.string(),
+        status: z.enum(['accepted', 'declined', 'completed', 'pending']),
       }),
     )
     .mutation(async ({ input, ctx }) => {
@@ -379,16 +380,12 @@ export const pokemonRouter = t.router({
         throw new TRPCError({ code: 'UNAUTHORIZED' });
       }
 
-      // if (offerDetail.status === 'accepted') {
-      //   throw new TRPCError({ code: 'CONFLICT' });
-      // }
-
       await prisma.offerDetail.update({
         where: {
           id: offerDetailId,
         },
         data: {
-          status: 'accepted',
+          status: input.status,
         },
       });
 

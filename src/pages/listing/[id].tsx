@@ -41,16 +41,6 @@ const ListingPage: NextPage = () => {
 
   const pokemon = data;
 
-  if (!pokemon) {
-    return (
-      <Container>
-        <Flex justify="center" align="center" maxW="4xl" pb={48}>
-          <Box textAlign={'center'}>No listing found.</Box>
-        </Flex>
-      </Container>
-    );
-  }
-
   return (
     <Suspense fallback={null}>
       <Container>
@@ -63,45 +53,54 @@ const ListingPage: NextPage = () => {
                 <Box>Error: {error?.message}</Box>
               </>
             ) : (
-              <Flex gap={4} w="100%" direction="column">
-                <Flex direction="column" justify="start" align="start">
-                  <Card>
-                    <Image
-                      alt={pokemon?.pokemon.name ?? ''}
-                      src={pokemon?.pokemon.image ?? ''}
-                    />
-                  </Card>
-                  <Heading size="lg">
-                    {data?.pokemon.name ?? ''} details
-                  </Heading>
-                  <Flex direction="column" align="start" justify="start">
-                    <Link href={`/profile/${pokemon?.user.id}`}>
-                      Trainer:{' '}
-                      {`${pokemon?.user.name}#${pokemon?.user.discriminator}`}
-                    </Link>
-                    <Text>Shiny: {pokemon?.shiny ? 'yes' : 'no'}</Text>
-                    <Text>Nature: {pokemon?.nature}</Text>
-                    <Text>Region: {pokemon?.region}</Text>
-                    <Text>Lv: {pokemon?.level}</Text>
-
-                    <PokeStatChart pokemon={pokemon} />
+              <>
+                {!pokemon && (
+                  <Flex justify="center" align="center" maxW="4xl" pb={48}>
+                    <Box textAlign={'center'}>No listing found.</Box>
                   </Flex>
-                </Flex>
-                <Flex direction="column">
-                  <Heading size="lg">Desired Trades</Heading>
-                  <Flex direction="column">
-                    {data?.offers.map((offer) => {
-                      return (
-                        <PokeListingOffer
-                          key={offer.id}
-                          pokemon={offer}
-                          isOwner={session?.user?.id === data.user.id}
+                )}
+                {pokemon && (
+                  <Flex gap={4} w="100%" direction="column">
+                    <Flex direction="column" justify="start" align="start">
+                      <Card>
+                        <Image
+                          alt={pokemon?.pokemon.name ?? ''}
+                          src={pokemon?.pokemon.image ?? ''}
                         />
-                      );
-                    })}
+                      </Card>
+                      <Heading size="lg">
+                        {data?.pokemon.name ?? ''} details
+                      </Heading>
+                      <Flex direction="column" align="start" justify="start">
+                        <Link href={`/profile/${pokemon?.user.id}`}>
+                          Trainer:{' '}
+                          {`${pokemon?.user.name}#${pokemon?.user.discriminator}`}
+                        </Link>
+                        <Text>Shiny: {pokemon?.shiny ? 'yes' : 'no'}</Text>
+                        <Text>Nature: {pokemon?.nature}</Text>
+                        <Text>Region: {pokemon?.region}</Text>
+                        <Text>Lv: {pokemon?.level}</Text>
+
+                        <PokeStatChart pokemon={pokemon} />
+                      </Flex>
+                    </Flex>
+                    <Flex direction="column">
+                      <Heading size="lg">Desired Trades</Heading>
+                      <Flex direction="column">
+                        {data?.offers.map((offer) => {
+                          return (
+                            <PokeListingOffer
+                              key={offer.id}
+                              pokemon={offer}
+                              isOwner={session?.user?.id === data.user.id}
+                            />
+                          );
+                        })}
+                      </Flex>
+                    </Flex>
                   </Flex>
-                </Flex>
-              </Flex>
+                )}
+              </>
             )}
           </Box>
         </Flex>

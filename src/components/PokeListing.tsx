@@ -23,10 +23,8 @@ export default function PokeListing({ pokemon }: any): JSX.Element {
       <Card flexGrow="1" flexBasis="160px">
         <CardBody p={2}>
           <Grid templateColumns={'repeat(3, 1fr)'}>
-            <VStack justify="flex-end">
-              <LinkOverlay href={`/listing/${pokemon.id}`}>
-                <PokeDetails pokemon={pokemon} />
-              </LinkOverlay>
+            <VStack justify="flex-end" w="100%" h="100%">
+              <PokeDetails pokemon={pokemon} />
             </VStack>
             <Box>
               <Link href={`/profile/${pokemon.user.id}`}>
@@ -34,13 +32,15 @@ export default function PokeListing({ pokemon }: any): JSX.Element {
                   {pokemon.user.name}#{pokemon.user.discriminator}
                 </Heading>
               </Link>
-              <Image
-                src={pokemon.pokemon.image}
-                alt={pokemon.pokemon.name}
-                width={120}
-                height={120}
-                priority
-              />
+              <LinkOverlay href={`/listing/${pokemon.id}`}>
+                <Image
+                  src={pokemon.pokemon.image}
+                  alt={pokemon.pokemon.name}
+                  width={120}
+                  height={120}
+                  priority
+                />
+              </LinkOverlay>
             </Box>
             <VStack justify="flex-end">
               <Box fontSize="xs" h="100%" w="100%">

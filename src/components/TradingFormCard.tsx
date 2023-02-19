@@ -13,6 +13,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import PokeStatChart from './PokeStatChart';
 
 import TradingFormDrawer from './TradingFormDrawer';
 
@@ -22,6 +23,15 @@ export default function TradingFormCard({
   index,
 }: any): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const pokemonStats = {
+    ...pokemon,
+    health: pokemon.health?.value ?? pokemon.health,
+    attack: pokemon.attack?.value ?? pokemon.attack,
+    defense: pokemon.defense?.value ?? pokemon.defense,
+    specialAttack: pokemon.specialAttack?.value ?? pokemon.specialAttack,
+    specialDefense: pokemon.specialDefense?.value ?? pokemon.specialDefense,
+    speed: pokemon.speed?.value ?? pokemon.speed,
+  };
 
   return (
     <>
@@ -69,18 +79,7 @@ export default function TradingFormCard({
               height={150}
             />
           </Flex>
-          <Text>Health: {pokemon.health?.label ?? pokemon.health}</Text>
-          <Text>Attack: {pokemon.attack?.label ?? pokemon.attack}</Text>
-          <Text>Defense: {pokemon.defense?.label ?? pokemon.defense}</Text>
-          <Text>
-            Special Attack:{' '}
-            {pokemon.specialAttack?.label ?? pokemon.specialAttack}
-          </Text>
-          <Text>
-            Special Defense:{' '}
-            {pokemon.specialDefense?.label ?? pokemon.specialDefense}
-          </Text>
-          <Text>Speed: {pokemon.speed?.label ?? pokemon.speed}</Text>
+          <PokeStatChart pokemon={pokemonStats} />
           <Text>Level: {pokemon.level}</Text>
           <Text>Nature: {pokemon.nature?.label ?? pokemon.nature}</Text>
           <Text>Tera Type: {pokemon.teraType?.label ?? pokemon.teraType}</Text>

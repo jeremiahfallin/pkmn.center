@@ -1,4 +1,4 @@
-import { Button, Flex } from '@chakra-ui/react';
+import { Button, Flex, Heading } from '@chakra-ui/react';
 
 import ControlledSelect from './ControlledSelect';
 import TradingFormCard from './TradingFormCard';
@@ -20,6 +20,9 @@ export default function TradingForm({
       </Flex>
       {type !== 'wishlist' && (
         <>
+          <Heading as="h3" size="sm">
+            Pokemon you want
+          </Heading>
           <Flex
             direction="row"
             gap={2}

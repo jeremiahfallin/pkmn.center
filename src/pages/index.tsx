@@ -37,7 +37,7 @@ const HomePage: NextPage = () => {
               </>
             ) : (
               <>
-                <Heading py={2}>Recent Postings</Heading>
+                <Heading py={2}>Latest Listings</Heading>
                 <Grid
                   templateColumns={{
                     base: 'repeat(1, 1fr)',

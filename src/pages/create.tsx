@@ -10,6 +10,7 @@ import {
   TabPanels,
   Tabs,
   Tooltip,
+  useToast,
 } from '@chakra-ui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { chakraComponents } from 'chakra-react-select';
@@ -24,12 +25,20 @@ import { useForm } from 'react-hook-form';
 import { createListingSchema } from 'schemas';
 import { trpc } from 'utils/trpc';
 
-const HomePage: NextPage = () => {
+const CreatePage: NextPage = () => {
+  const toast = useToast();
   const { data: session } = useSession();
   const { data, error, status } = trpc.pokemonRouter.getAll.useQuery();
   const createListing = trpc.pokemonRouter.create.useMutation({
     onSuccess: () => {
       console.log('success');
+      toast({
+        title: 'Listing created.',
+        description: "Good luck! We'll let you know when you get an offer",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      });
     },
   });
   const methods = useForm({
@@ -113,7 +122,7 @@ const HomePage: NextPage = () => {
     <Suspense fallback={null}>
       <Container>
         <Flex justify="center" align="center" pb={48} w="100%">
-          <Box textAlign={'center'}>
+          <Box textAlign={'center'} w="100%">
             <Heading py={4}>Create a listing</Heading>
             {status === 'error' ? (
               <>
@@ -128,7 +137,7 @@ const HomePage: NextPage = () => {
                 })}
               >
                 <FormControl isDisabled={status === 'loading'}>
-                  <Tabs>
+                  <Tabs isFitted>
                     <TabList>
                       <Tab
                         onClick={(e) => methods.setValue('listingType', 'buy')}
@@ -146,6 +155,9 @@ const HomePage: NextPage = () => {
                     <TabPanels>
                       <TabPanel>
                         <Flex direction="column" gap={2}>
+                          <Heading as="h3" size="sm">
+                            Pokemon you're trading
+                          </Heading>
                           <ControlledSelect
                             name={'pokemon'}
                             label={'Pokemon'}
@@ -154,6 +166,7 @@ const HomePage: NextPage = () => {
                             rules={{ required: 'This is required' }}
                             components={customComponents}
                           />
+
                           <TradingForm
                             type="sell"
                             data={pokemonData}
@@ -199,4 +212,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default CreatePage;

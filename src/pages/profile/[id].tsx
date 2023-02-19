@@ -54,12 +54,54 @@ const OfferTab = () => {
   if (status === 'error') {
     return <Box>Error: {error?.message}</Box>;
   }
+
   return (
-    <VStack>
-      {data?.map((offer) => (
-        <PokeTrade key={offer.id} pokemon={offer} />
-      ))}
-    </VStack>
+    <Tabs variant="solid-rounded" w="100%" isLazy>
+      <TabList>
+        <Tab>Open</Tab>
+        <Tab>Accepted</Tab>
+        <Tab>Declined</Tab>
+        <Tab>History</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>
+          <VStack w="100%">
+            {data.map((offer) => {
+              return (
+                <PokeTrade key={offer.id} type="pending" pokemon={offer} />
+              );
+            })}
+          </VStack>
+        </TabPanel>
+        <TabPanel>
+          <VStack w="100%">
+            {data.map((offer) => {
+              return (
+                <PokeTrade key={offer.id} type="accepted" pokemon={offer} />
+              );
+            })}
+          </VStack>
+        </TabPanel>
+        <TabPanel>
+          <VStack w="100%">
+            {data.map((offer) => {
+              return (
+                <PokeTrade key={offer.id} type="declined" pokemon={offer} />
+              );
+            })}
+          </VStack>
+        </TabPanel>
+        <TabPanel>
+          <VStack w="100%">
+            {data.map((offer) => {
+              return (
+                <PokeTrade key={offer.id} type="completed" pokemon={offer} />
+              );
+            })}
+          </VStack>
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
   );
 };
 
@@ -102,7 +144,7 @@ const ProfilePage: NextPage = () => {
                       {data?.name}#{data?.discriminator}
                     </Heading>
                   </HStack>
-                  <Tabs isFitted>
+                  <Tabs isFitted isLazy>
                     <TabList>
                       <Tab>Listings</Tab>
                       <Tab>Offers</Tab>

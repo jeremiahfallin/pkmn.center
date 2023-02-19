@@ -2,13 +2,13 @@ import {
   Box,
   Button,
   Checkbox,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Flex,
   FormHelperText,
   FormLabel,
@@ -28,7 +28,7 @@ import { Controller } from 'react-hook-form';
 
 import ControlledSelect from './ControlledSelect';
 
-export default function TradingFormDrawer({
+export default function TradingFormModal({
   methods,
   pokemon,
   isOpen,
@@ -37,12 +37,12 @@ export default function TradingFormDrawer({
 }: any): JSX.Element {
   const name = typeof index !== 'undefined' ? `offers[${index}]` : '';
   return (
-    <Drawer isOpen={isOpen} onClose={onClose}>
-      <DrawerOverlay />
-      <DrawerContent>
-        <DrawerCloseButton />
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalCloseButton />
 
-        <DrawerHeader>
+        <ModalHeader>
           <Heading>{pokemon.pokemon.value}</Heading>
           <Image
             src={pokemon.pokemon.image}
@@ -50,9 +50,9 @@ export default function TradingFormDrawer({
             width={100}
             height={100}
           />
-        </DrawerHeader>
+        </ModalHeader>
 
-        <DrawerBody>
+        <ModalBody>
           <Box flexGrow={1} flexBasis={'160px'}>
             {!name && (
               <>
@@ -287,14 +287,14 @@ export default function TradingFormDrawer({
               )}
             </Flex>
           </Box>
-        </DrawerBody>
+        </ModalBody>
 
-        <DrawerFooter>
+        <ModalFooter>
           <Button colorScheme="blue" onClick={onClose}>
             Close
           </Button>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
   );
 }
